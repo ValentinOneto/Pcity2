@@ -1,0 +1,37 @@
+@font-face {
+    font-family: "crimson";
+    src: url("../recursos/fonts/crimson/CrimsonText-Regular.ttf");
+}
+body{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+.rect{
+    display: flex;
+    justify-content: space-between;
+}
+.title{
+    font-family: "crimson";
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button{
+    height: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+}
+.continue{
+    height: 200px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.home{
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
