@@ -1,6 +1,80 @@
+@font-face {
+    font-family: "crimson";
+    src: url("../recursos/fonts/crimson/CrimsonText-SemiBold.ttf");
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+}
+
+.rect{
+    width: 100%;
+    height:30%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo-container{
+    width: 8%;
+    height:70%;
+    display: flex;
+    justify-content: center;
+}
+.logo{
+    width: 100%;
+    height: 100%;
+}
+
 .foto{
-    width: 200px;
-    height: 150px;
+    width: 23%;
+    height:30% ;
     background-color: grey;
     border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home{
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.title{
+    font-family: "crimson";
+    font-size: 40px;
+    width: 100%;
+    height: 55%;
+}
+
+.rect2{
+display: flex;
+align-items: center;
+flex-direction: column;
+}
+.input-container{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.input{
+    width: 90%;
+    height: 40%;
+    border-radius: 10px;
+}
+.description{
+    width: 50%;
+    height: 13%;
+    font-family: "crimson";
+    font-size: 30px;
+}
+
+.explanation{
+    font-family: "crimson";
+    font-size: 20px;
 }
