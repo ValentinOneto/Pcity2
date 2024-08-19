@@ -1,0 +1,102 @@
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+header { 
+    width: 100%;
+    height: 200px;
+    background-color: #70D0F6;
+    position:absolute;
+    top: 0%;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-img {
+    height: 180px;
+    width: 125px;
+    margin-left: 10%;
+}
+
+h1{
+    font-family: "Crimson Text", serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 110px;
+}
+
+.home{
+    height: fit-content;
+    width:fit-content;
+    margin-right: 1%;
+}
+
+  
+.home:hover {
+    background-color: #9CDBF3;
+  }
+
+main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+}
+.comp1,.comp2{
+    display:flex;
+    align-items: center;
+    row-gap: 100px;
+    font-size: 50px;
+}
+
+.vs{
+    height:fit-content;
+    width:fit-content;
+    display:flex;
+    justify-content: center;
+}
+
+main{
+    margin-top:250px;
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.busc1, .busc2{
+    border-color: #384D6E;
+    width: 417px;
+    height: 55px;
+    font-size: 20px;
+    border-radius: 15px;
+    color: black;
+    font-family: "Crimson Text", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.busc1::placeholder ,.busc2::placeholder{
+    color: #D9D9D9;
+}
+
+.comparar-butt{
+    border-radius: 20px;
+    background-color: #70D0F6;
+    font-family: "Crimson Text", serif;
+    font-weight: 700;
+    font-style: normal;
+    height: 100px;
+    width: 500px;
+    font-size: 50px;
+}
+
+.comparar{
+    position: absolute;
+    bottom: 15%;
+    left: 31%;
+}
+
