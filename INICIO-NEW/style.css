@@ -1,0 +1,63 @@
+body{
+margin: 0%;
+padding: 0%;
+height: 100%;
+width: 100%;    
+}
+
+header{
+height: 200px;
+width: 100%;
+background-color:#1E90FF;
+z-index: -1;
+margin-top: 0%;
+}
+
+.links{
+    display: flex;
+    justify-content: space-around;
+    justify-content: flex-end;
+    gap: 20px;
+    position: relative;
+    bottom: 98%;
+    right: 4%;
+    text-decoration: underline;
+
+}
+
+.armar,.comparar,.info{
+    height: 100%;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    background-color:#1E90FF;
+    border: none;
+}
+
+.busc{
+    position: relative;
+    left: 15%;
+    bottom: 70%;
+    border-radius: 10px;
+    border: solid black;
+    border-width: 2px;
+    height: 55px;
+    width: 540px;
+    font-family: "Crimson Text", serif;
+    font-weight: 300;
+    font-style: normal;
+    color: black;
+    font-size:28px;
+    background-image: url("/lupa.png");
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position: 7px center;
+    padding-left:45px;
+
+    &.busc::placeholder{
+        color: #D9D9D9;
+    }
+}
+
