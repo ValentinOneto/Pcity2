@@ -7,8 +7,32 @@ body {
 
 header{
     width: 100%;
-    height: 50%;
+    height: 18%;
     display: flex;
-    border: solid;
+    justify-content: space-between;
+    background-color: #1E90FF;
+    ;
 }
 
+.title{
+    display: flex;
+    width: 58%;
+    font-size: 260%;
+    align-items: center;
+}
+
+.links{
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.logo{
+width: 60%;
+height: auto;
+}
+
+a{
+color: black;
+}
