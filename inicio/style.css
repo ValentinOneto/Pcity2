@@ -1,125 +1,42 @@
 body{
-    box-sizing: border-box;
-    margin: 0px;
-    padding: 0%;
+margin: 0%;
+padding: 0%;
+height: 100%;
+width: 100%;    
 }
 
-header {
-    width: 100%;
-    height: 200px;
-    background-color: #70D0F6;
-    display:flex;
-    align-items: flex-start;
-    position: sticky;
-}
-
-.fotos{
-margin-top: 1.5%;
-margin-left:57%;
-width: 500px;
-display: flex;
-justify-content: space-around;
-border-radius: 5px;
-border: none;
-gap: 40px;
-color: #364D6E;
-}
-
-.text-foto{
-font-family: "Acme", sans-serif;
-font-weight: 400;
-font-style: normal;
-text-align: center;
-display: flex;
-justify-content: center;
-font-size: 30px;
+header{
+height: 200px;
+width: 100%;
+background-color:#1E90FF;
+z-index: -1;
 margin-top: 0%;
-gap: 50px;
 }
 
-
-.vs{
-    height: 128px;
-    width:max-content;
-}
-
-.info,.computer,.vs{
-    transition: 0,3s ease;
-
-&:hover{
-    cursor:pointer;
-    scale: 1.04;
-}
-}
-
-.info,.computer,.vs{
-    border: none;
-    background-color: #70D0F6;
-}
-
-.logo-img{
-    height: 180px;
-    width: 125px;
-    display:flex;
-    position: absolute;
-    left: 2%;
-}
-
-.busc{
-    position:absolute;
-    left: 15%;
-    top: 4%;
-    width: 417px;
-    height: 55px;
-    font-size: 20px;
-    border-radius: 15px;
-    border: none;
-    font-family: "Crimson Text", serif;
-    font-weight: 400;
-    font-style: normal;
-    margin-top: 0%;
-
-    &::placeholder{
-        color: #D9D9D9;
-        border:none;
-    }
-}
-
-.comps{
+.links{
+    position:relative;
+    top:0%;
+    width: 500px;
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
-    gap: 10px;
-    row-gap: 20px;
-    margin-left: 2%;
-    margin-right: 2%;
-    margin-top: 3%;
 }
 
-.comp{
-    text-align: center;
-    font-size: 24px;
-    height: 120px;
-    width: 240px;
-transition: 0,3s ease;
-
-    &:hover{
-        cursor:pointer;
-        scale: 1.03;
-    }
+.armar,.comparar,.info{
+    text-align: start;
+    height: 100%;
+    position:relative;
+    top: 40px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: x-large;
+    background-color:#1E90FF;
+    border: none;
+    gap: 50px;
 }
 
-h1{
-     margin-top: 3%;
-     margin-left: 2%;
-     color:#384D6E;
-     font-family: "Crimson Text", serif;
-     font-weight: 400;
-     font-style: normal;
-     font-size: 45px;
-}
-
-.info {
-    position: relative;
-    left: 35px;
+.logo{
+    position:relative;
+    bottom: 20px;
 }
