@@ -64,7 +64,7 @@ h3{
     font-weight: 400;
     font-style: normal;
     font-size: 20px;  
-    margin-top: -5%;
+    margin-top: -10%;
 }
 
 article{
@@ -73,6 +73,7 @@ article{
     height: auto;
     width: 500px;
     margin-left: 200px;
+    margin-top: -50px;
 }
 
 main{
@@ -81,9 +82,35 @@ main{
 }
 
 .img{
-    height: 500px;
-    width: 500px;
+    height: 540px;
+    width: 540px;
     position: absolute;
-    left: 20px;
+    left: 60px;
     top: 150px;
+}
+aside{
+    height: fit-content;
+    position:absolute;
+    bottom: 8%;
+    right: 10%;
+
+}
+
+.volver{
+    color: #384D6E;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    font-family: "Crimson Text", serif;
+    font-weight: 500;
+    background-color: #D9D9D9;
+    border-radius: 8px;
+    border: none;
+    height: 70px;
+    transition: 0,3s ease;
+
+    &:hover{
+        cursor:pointer;
+        scale: 1.03;
+    }
 }
