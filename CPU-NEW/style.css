@@ -69,7 +69,7 @@ article{
     height: auto;
     width: 500px;
     margin-left: 200px;
-    margin-top: -50px;
+    margin-top: -20px;
 }
 
 main{
@@ -78,11 +78,11 @@ main{
 }
 
 .img{
-    height: 540px;
-    width: 540px;
+    height: 520px;
+    width: 520px;
     position: absolute;
     left: 60px;
-    top: 150px;
+    top: 100px;
 }
 aside{
     height: fit-content;
