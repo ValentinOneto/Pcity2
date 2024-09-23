@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "crimson";
+    src: url("../recursos,/fonts/crimson/CrimsonText-SemiBold.ttf");
+}
+
 body {
     height: 100vh;
     width: 100vw;
@@ -19,6 +24,7 @@ header{
     width: 58%;
     font-size: 260%;
     align-items: center;
+    font-family: "crimson";
 }
 
 .links{
