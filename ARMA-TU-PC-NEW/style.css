@@ -1,44 +1,90 @@
-@font-face {
-    font-family: "crimson";
-    src: url("../recursos,/fonts/crimson/CrimsonText-SemiBold.ttf");
-}
-
-body {
+body{
+    margin: 0%;
+    padding: 0%;
     height: 100vh;
     width: 100vw;
-    margin: 0;
-    padding: none;
 }
-
 header{
-    width: 100%;
     height: 18%;
+    width: 100%;
+    background-color:#1E90FF;
+    z-index: -1;
+    margin-top: 0%;
     display: flex;
     justify-content: space-between;
-    background-color: #1E90FF;
-    ;
+    }
+
+nav{
+    width: 550px;
+    height: 80px;
+    display: flex;
+    justify-content: space-evenly;
+    margin-right: 15px;
+    margin-top: 5px;
 }
 
-.title{
+.info,.comparar,.inicio{
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-size: 28px;
+    background-color:#1E90FF;
+    border: none;
+    text-decoration: underline;
+    transition: 0,3s ease;
+
+    &:hover{
+        cursor:pointer;
+        scale: 1.03;
+    }
+}
+
+h1{
+    font-family: "Crimson Text", serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 100px;
     display: flex;
-    width: 58%;
-    font-size: 260%;
+    align-self: center;
     align-items: center;
-    font-family: "crimson";
-}
-
-.links{
-    width: 30%;
-    display: flex;
-    justify-content: space-around;
-
 }
 
 .logo{
-width: 60%;
-height: auto;
+    padding-right: 50px;
 }
 
-a{
-color: black;
+main{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.comp{
+    border: none;
+    background-color:white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Crimson Text", serif;
+    font-size: 23px;
+    font-weight: 510;
+    margin-left: 30px;
+    transition: 0,3s ease;
+
+    &:hover{
+        cursor:pointer;
+        scale: 1.03;
+    }
+}
+
+.img{
+    width: 130px;
+    height: 130px;
+    object-fit: contain;
+}
+
+h2{
+    font-size: 50px;
+    margin-left: 50px;
+    color: #384D6E;
+    font-weight: 300;
 }
