@@ -1,0 +1,64 @@
+@font-face {
+    font-family: "crimson";
+    src: url("../recursos/fonts/crimson/CrimsonText-Regular.ttf");
+}
+@font-face {
+    font-family: "inter";
+    src: url("../recursos/fonts/inter/Inter_18pt-Regular.ttf");
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    margin: 0%;
+    padding: 0%;
+}
+
+header{
+    height: 18%;
+    width: 100%;
+    background-color:#1E90FF;
+    z-index: -1;
+    margin-top: 0%;
+    display: flex;
+    justify-content: space-between;
+    }
+
+nav{
+    width: 550px;
+    height: 80px;
+    display: flex;
+    justify-content: space-evenly;
+    margin-right: 15px;
+    margin-top: 5px;
+}
+
+.info,.comparar,.inicio{
+    font-family: "inter";
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-size: 28px;
+    background-color:#1E90FF;
+    border: none;
+    text-decoration: underline;
+    transition: 0,3s ease;
+
+    &:hover{
+        cursor:pointer;
+        scale: 1.03;
+    }
+}
+
+h1{
+    font-family: "crimson";
+    font-weight: 500;
+    font-style: normal;
+    font-size: 100px;
+    display: flex;
+    align-self: center;
+    align-items: center;
+}
+
+.logo{
+    padding-right: 50px;
+}
