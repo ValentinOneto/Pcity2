@@ -1,0 +1,527 @@
+{
+    "procesadores AMD": [
+      {
+        "nombre": "Ryzen 5 5600G",
+        "velocidad": "3.9 GHz",
+        "cache": "384KB 3MB 16MB",
+        "hilos": 12,
+        "nucleos": 6,
+        "transistores": "7 nm",
+        "ram_velocidad": "3200 MHz",
+        "max_ram": "64 GB",
+        "memoria_canales": 2,
+        "gpu": {
+          "velocidad": "1900 MHz",
+          "unidades_ejecucion": 7,
+          "pantallas_compatibles": 3,
+          "unidades_generacion_salida": 8,
+          "tmu": 28,
+          "unidades_tonalidad": 448
+        }
+      },
+      {
+        "nombre": "Ryzen 7 5700X",
+        "velocidad": "3.4 GHz",
+        "cache": "512KB 4MB 32MB",
+        "hilos": 16,
+        "nucleos": 8,
+        "transistores": "7 nm",
+        "ram_velocidad": "3200 MHz",
+        "max_ram": "128 GB",
+        "memoria_canales": 2
+      },
+      {
+        "nombre": "Ryzen 5 4500",
+        "velocidad": "3.6 GHz",
+        "cache": "384KB 3MB 32MB",
+        "hilos": 12,
+        "nucleos": 6,
+        "transistores": "7 nm",
+        "ram_velocidad": "3200 MHz",
+        "max_ram": "128 GB",
+        "memoria_canales": 2
+      },
+      {
+        "nombre": "Ryzen 5 3600",
+        "velocidad": "3.6 GHz",
+        "cache": "384KB 3MB 8MB",
+        "hilos": 12,
+        "nucleos": 6,
+        "transistores": "7 nm",
+        "ram_velocidad": "3200 MHz",
+        "max_ram": "128 GB",
+        "memoria_canales": 2  
+      },
+      {
+        "nombre": "Ryzen 3 8600G",
+        "velocidad": "3.4 GHz",
+        "cache": "256KB 4MB 8MB",
+        "hilos": 8,
+        "nucleos": 4,
+        "transistores": "12 nm",
+        "ram_velocidad": "5200 MHz",
+        "max_ram": "256 GB",
+        "memoria_canales": 2,
+        "gpu": {
+            "velocidad": "800 MHz",
+            "unidades_ejecucion": 8,
+            "pantallas_compatibles": 4,
+            "unidades_generacion_salida": 8,
+            "tmu": 16,
+            "unidades_tonalidad": 256
+          }
+      }
+    ],
+
+    "procesadores Intel": [
+        {
+        "nombre": "Intel Core I5-10400",
+        "velocidad": "3.9 GHz",
+        "cache": "384KB 1,5MB 12MB",
+        "hilos": 12,
+        "nucleos": 6,
+        "transistores": "14 nm",
+        "ram_velocidad": "2666 MHz",
+        "max_ram": "128 GB",
+        "memoria_canales": 2,
+        "gpu": {
+         "velocidad": "350 MHz",
+         "unidades_ejecucion": 24,
+         "pantallas_compatibles": 3,
+         "unidades_generacion_salida": 3,
+         "tmu": 24,
+         "unidades_tonalidad": 192
+        }
+        },
+
+        {
+          "nombre": "Intel Core i3-14100",
+          "velocidad": "3.5 GHz",
+          "cache": "320KB 5MB 12MB",
+          "hilos": 8,
+          "nucleos": 4,
+          "transistores": "10 nm",
+          "ram_velocidad": "4800 MHz",
+          "max_ram": "128 GB",
+          "memoria_canales": 2,
+          "gpu": {
+           "velocidad": "300 MHz",
+           "unidades_ejecucion": 32,
+           "pantallas_compatibles": 4,
+           "unidades_generacion_salida": 8,
+           "tmu": 12,
+           "unidades_tonalidad": 192
+        }
+      },
+
+      {
+        "nombre": "Intel Core i5-12400",
+        "velocidad": "2.5 GHz",
+        "cache": "480KB 7,5MB 18MB",
+        "hilos":12,
+        "nucleos": 6,
+        "transistores": "10 nm",
+        "ram_velocidad": "4800 MHz",
+        "max_ram": "128 GB",
+        "memoria_canales": 2,
+        "gpu": {
+         "velocidad": "300 MHz",
+         "unidades_ejecucion": 24,
+         "pantallas_compatibles": 4,
+         "unidades_generacion_salida": 24,
+         "tmu": 16,
+         "unidades_tonalidad": 256
+       }
+       },
+
+       {
+        "nombre": "Intel Core i7-13700k",
+        "velocidad": "8 x 3.4 GHz / 8 x 2.5 GHz",
+        "cache": " deesconocido 24MB 30MB",
+        "hilos": 24,
+        "nucleos": 16,
+        "transistores": "7 nm",
+        "ram_velocidad": "5600 MHz",
+        "max_ram": "128 GB",
+        "memoria_canales": 2,
+        "gpu": {
+         "velocidad": "300 MHz",
+         "unidades_ejecucion": 32,
+         "pantallas_compatibles": 4,
+         "unidades_generacion_salida": 8,
+         "tmu": 16,
+         "unidades_tonalidad": 256
+       }
+       },
+
+       {
+        "nombre": "Intel Core i5-12600k",
+        "velocidad": "6 x 3.7 GHz / 4 x 2.8 GHz",
+        "cache": " deesconocido 9.5MB 20MB",
+        "hilos": 16,
+        "nucleos": 10,
+        "transistores": "7 nm",
+        "ram_velocidad": "4800 MHz",
+        "max_ram": "128 GB",
+        "memoria_canales": 2,
+        "gpu": {
+         "velocidad": "300 MHz",
+         "unidades_ejecucion": 32,
+         "pantallas_compatibles": 4,
+         "unidades_generacion_salida": "desconocido",
+         "tmu": "desconocido",
+         "unidades_tonalidad": "desconocido"
+       }
+       }
+    ],
+
+    
+
+    "motherboards": [
+      {
+        "nombre": "Gigabyte B450M DS3H",
+        "socket": "AM4",
+        "wifi": "No tiene",
+        "bluetooth": "No tiene",
+        "canales_memoria": 2,
+        "RAM_max": "64 GB",
+        "ranuras_RAM": 4,
+        "velocidad_RAM_max": "2933 GHz",
+        "puertos": {
+          "usb_a_gen1": 4,
+          "usb_a_gen2": 0,
+          "usb_c_gen1": 0,
+          "usb_c_gen2": 0,
+          "usb_2_0": 4,
+          "usb_2x2": 0
+        },
+        "ssd_ranuras": {
+          "sata_2": 0,
+          "sata_3": 0,
+          "msata": 0,
+          "m2": 1,
+          "u2": 0
+        },
+        "relación_señal_ruido": "97 dB"
+      },
+
+      {
+        "nombre": "MSI MAG B650 Tomahawk WiFi",
+        "socket": "AM5",
+        "wifi": "no tiene",
+        "bluetooth": "no tiene",
+        "canales_memoria": 2,
+        "RAM_max": "128 GB",
+        "ranuras_RAM": 4,
+        "velocidad_RAM_max": "4800 GHz",
+        "puertos": {
+          "usb_a_gen1": 4,
+          "usb_a_gen2": 3,
+          "usb_c_gen1": 0,
+          "usb_c_gen2": 0,
+          "usb_2_0": 2,
+          "usb_2x2": 1
+        },
+        "ssd_ranuras": {
+          "sata_2": 0,
+          "sata_3": 6,
+          "msata": 0,
+          "m2": 3,
+          "u2": 0
+        },
+        "relación_señal_ruido": "120 dB"
+      },
+
+      {
+        "nombre": "Asus Prime B569m-A",
+        "socket": "LGA 1200",
+        "wifi": "tiene",
+        "bluetooth": "tiene",
+        "canales_memoria": 2,
+        "RAM_max": "128 GB",
+        "ranuras_RAM": 4,
+        "velocidad_RAM_max": "3200 GHz",
+        "puertos": {
+          "usb_a_gen1": 0,
+          "usb_a_gen2": 1,
+          "usb_c_gen1": 0,
+          "usb_c_gen2": 1,
+          "usb_2_0": 4,
+          "usb_2x2": 0
+        },
+        "ssd_ranuras": {
+          "sata_2": 0,
+          "sata_3": 6,
+          "msata": 0,
+          "m2": 2,
+          "u2": 0
+        },
+        "relación_señal_ruido": "desconocido"
+      },
+
+      {
+        "nombre": "MSI MPG B550 Gaming Plus",
+        "socket": "AM4",
+        "wifi": "no tiene",
+        "bluetooth": "no tiene",
+        "canales_memoria": 2,
+        "RAM_max": "128 GB",
+        "ranuras_RAM": 4,
+        "velocidad_RAM_max": "3200 GHz",
+        "puertos": {
+          "usb_a_gen1": 2,
+          "usb_a_gen2": 1,
+          "usb_c_gen1": 0,
+          "usb_c_gen2": 1,
+          "usb_2_0": 4,
+          "usb_2x2": 0
+        },
+        "ssd_ranuras": {
+          "sata_2": 0,
+          "sata_3": 6,
+          "msata": 0,
+          "m2": 2,
+          "u2": 0
+        },
+        "relación_señal_ruido": "95 dB"
+      },
+
+      {
+        "nombre": "MSI MAG Z790 Tomahawk WiFi",
+        "socket": "LGA 1700",
+        "wifi": "tiene",
+        "bluetooth": "tiene",
+        "canales_memoria": 2,
+        "RAM_max": "256 GB",
+        "ranuras_RAM": 4,
+        "velocidad_RAM_max": "5600 GHz",
+        "puertos": {
+          "usb_a_gen1": 4,
+          "usb_a_gen2": 4,
+          "usb_c_gen1": 0,
+          "usb_c_gen2": 1,
+          "usb_2_0": 0,
+          "usb_2x2": 0
+        },
+        "ssd_ranuras": {
+          "sata_2": 0,
+          "sata_3": 7,
+          "msata": 0,
+          "m2": 4,
+          "u2": 0
+        },
+        "relación_señal_ruido": "120 dB"
+      }
+
+    ],
+    "ram": [
+      {
+        "nombre": "Corsair Vengeance DDR4-3200 (2x8GB)",
+        "memoria": "2x8GB",
+        "velocidad_spd": "2133 MHz",
+        "velocidad_probada": "3200 MHz",
+        "latencia": "13.75 ns",
+        "latencia_cas": 22,
+        "Temporización_TRAS_TRCD_TRP": "53;22;22",
+        "voltaje": "1.2 V"
+      },
+
+      {
+        "nombre": "Corsair Vengeance RGB DDR5-6000 C30 32GB (2x16GB)",
+        "memoria": "2x16GB",
+        "velocidad_spd": "4800 MHz",
+        "velocidad_probada": "6000 MHz",
+        "latencia": "10 ns",
+        "latencia_cas": 30,
+        "Temporización_TRAS_TRCD_TRP": "76;36;36",
+        "voltaje": "1.4 V"
+      },
+
+      {
+        "nombre": "Kingston Fury Beast DDR5-6000 CL38 8GB (1x8GB)",
+        "memoria": "8GB",
+        "velocidad_spd": "3000 MHz",
+        "velocidad_probada": "6000 MHz",
+        "latencia": "10.67 ns",
+        "latencia_cas": 33,
+        "Temporización_TRAS_TRCD_TRP": "80;38;38",
+        "voltaje": "1.35 V"
+      },
+
+      {
+        "nombre": "Corsair Vengeance DDR5-5600 C32 32GB (2x16GB)",
+        "memoria": "2x16GB",
+        "velocidad_spd": "4800 MHz",
+        "velocidad_probada": "5600 MHz",
+        "latencia": "11.43 ns",
+        "latencia_cas": 32,
+        "Temporización_TRAS_TRCD_TRP": "76;36;36",
+        "voltaje": "1.35 V"
+      },
+
+      {
+        "nombre": "Adata XPG Gammix D30 DDR4-3200 CL16 16GB (2x8GB)",
+        "memoria": "2x8GB",
+        "velocidad_spd": "2666 MHz",
+        "velocidad_probada": "3200 MHz",
+        "latencia": "10 ns",
+        "latencia_cas": 16,
+        "Temporización_TRAS_TRCD_TRP": "19;19;19",
+        "voltaje": "1.35 V"
+      }
+    ],
+
+    "gpus": [
+      {
+        "nombre": "Nvidia GeForce RTX 3060",
+        "velocidad_reloj": "1320 MHz",
+        "indice_pixeles": "113.7 GPixels/s",
+        "rendimiento_coma_flotante": "12.74 TFLOPS",
+        "indice_textura": "199 GTexels/s",
+        "velocidad_memoria": "1875 GHz",
+        "unidades_tonalidad": 3584,
+        "unidades_textura": 112,
+        "unidades_generacion_salida": 64,
+        "memoria": {
+          "velocidad_efectiva": "15000 MHz",
+          "ancho_banda_max": "360 GB/s",
+          "vram": "12 GB",
+          "bus_width": "192 bits"
+        },
+        "pantallas_compatibles": 4,
+        "lithography": "8 nm"
+      },
+
+      {
+        "nombre": "Nvidia GeForce RTX 4060",
+        "velocidad_reloj": "1830 MHz",
+        "indice_pixeles": "78.72 GPixels/s",
+        "rendimiento_coma_flotante": "15.11 TFLOPS",
+        "indice_textura": "236.2 GTexels/s",
+        "velocidad_memoria": "2125 GHz",
+        "unidades_tonalidad": 3072,
+        "unidades_textura": 96,
+        "unidades_generacion_salida": 32,
+        "memoria": {
+          "velocidad_efectiva": "17000 MHz",
+          "ancho_banda_max": "272 GB/s",
+          "vram": "8 GB",
+          "bus_width": "128 bits"
+        },
+        "pantallas_compatibles": 4,
+        "lithography": "8 nm"
+      },
+
+      {
+        "nombre": "AMD Radeon RX 580",
+        "velocidad_reloj": "1120 MHz",
+        "indice_pixeles": "42.9 GPixels/s",
+        "rendimiento_coma_flotante": "6.1 TFLOPS",
+        "indice_textura": "193 GTexels/s",
+        "velocidad_memoria": "2000 GHz",
+        "unidades_tonalidad": 2304,
+        "unidades_textura": 144,
+        "unidades_generacion_salida": 32,
+        "memoria": {
+          "velocidad_efectiva": "8000 MHz",
+          "ancho_banda_max": "224 GB/s",
+          "vram": "8.1 GB",
+          "bus_width": "256 bits"
+        },
+        "pantallas_compatibles": "desconocido",
+        "lithography": "14 nm"
+      },
+      
+      {
+        "nombre": "Nvidia GeForce GTX 1650",
+        "velocidad_reloj": "1485 MHz",
+        "indice_pixeles": "53.28 GPixels/s",
+        "rendimiento_coma_flotante": "2.98 TFLOPS",
+        "indice_textura": "93.24 GTexels/s",
+        "velocidad_memoria": "2000 GHz",
+        "unidades_tonalidad": 896,
+        "unidades_textura": 56,
+        "unidades_generacion_salida": 32,
+        "memoria": {
+          "velocidad_efectiva": "8000 MHz",
+          "ancho_banda_max": "128 GB/s",
+          "vram": "4 GB",
+          "bus_width": "128 bits"
+        },
+        "pantallas_compatibles": "3",
+        "lithography": "12 nm"
+      },
+
+      {
+        "nombre": "AMD Radeon RX 6650 XT",
+        "velocidad_reloj": "2055 MHz",
+        "indice_pixeles": "168.6 GPixels/s",
+        "rendimiento_coma_flotante": "10.79 TFLOPS",
+        "indice_textura": "337.3 GTexels/s",
+        "velocidad_memoria": "2190 GHz",
+        "unidades_tonalidad": 2049,
+        "unidades_textura": 198,
+        "unidades_generacion_salida": 64,
+        "memoria": {
+          "velocidad_efectiva": "17500 MHz",
+          "ancho_banda_max": "280 GB/s",
+          "vram": "8 GB",
+          "bus_width": "1128 bits"
+        },
+        "pantallas_compatibles": "4",
+        "lithography": "7 nm"
+      }
+    ],
+
+    "Disco": [
+      {
+        "nombre": "Samsung 980 Pro 1TB",
+        "capacidad": "1 TB",
+        "velocidad_lectura_aleatoria": "1000000 IOPS",
+        "velocidad_lectura_secuencial": "7000 MB/s",
+        "velocidad_escritura_aleatoria": "1000000 IOPS",
+        "velocidad_escritura secuencial": "5000 MB/s",
+        "canales_controlador": 4
+      },
+
+      {
+        "nombre": "Kingston A400 480GB",
+        "capacidad": "480 GB",
+        "velocidad_lectura_aleatoria": "95000 IOPS",
+        "velocidad_lectura_secuencial": "500 MB/s",
+        "velocidad_escritura_aleatoria": "85000 IOPS",
+        "velocidad_escritura secuencial": "450 MB/s",
+        "canales_controlador": 2
+      },
+
+      {
+        "nombre": "Adata Ultimate SU650 240GB",
+        "capacidad": "240 GB",
+        "velocidad_lectura_aleatoria": "40000 IOPS",
+        "velocidad_lectura_secuencial": "520 MB/s",
+        "velocidad_escritura_aleatoria": "75000 IOPS",
+        "velocidad_escritura secuencial": "450 MB/s",
+        "canales_controlador": 8
+      },
+
+      {
+        "nombre": "Kingston KC3000 1024GB",
+        "capacidad": "1 TB",
+        "velocidad_lectura_aleatoria": "900000 IOPS",
+        "velocidad_lectura_secuencial": "7000 MB/s",
+        "velocidad_escritura_aleatoria": "1000000 IOPS",
+        "velocidad_escritura secuencial": "6000 MB/s",
+        "canales_controlador": 8
+      },
+
+      {
+        "nombre": "Adata Ultimate SU650 512GB",
+        "capacidad": "512 GB",
+        "velocidad_lectura_aleatoria": "40000 IOPS",
+        "velocidad_lectura_secuencial": "520 MB/s",
+        "velocidad_escritura_aleatoria": "75000 IOPS",
+        "velocidad_escritura secuencial": "450 MB/s",
+        "canales_controlador": 8
+      }
+    ]
+  }
