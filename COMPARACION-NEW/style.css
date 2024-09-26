@@ -58,4 +58,22 @@ p{
 main{
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+h2{
+    font-size: 70px;
+    font-family: 'crimson text';
+    font-weight: 300;
+}
+
+input{
+    height: 50px;
+    width: 300px;
+    background-color: #D9D9D9;
+    border: #D9D9D9;
+    font-size: 25px;
+    font-family: 'crimson text';
+    font-weight: 500;
 }

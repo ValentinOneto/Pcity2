@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Comparar</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="main.js">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
@@ -25,11 +26,18 @@
 
     <p>Compará y aprendé</p>
     <main>
-        <input type="text" id="input" class="input1" placeholder="Escribe aquí">
-        <div class="busq" id="busq"></div>
+        <div class="resultados">
+            <input type="text" id="input1" class="input1" placeholder="Escribe aquí">
+            <div class="busqs" id="busq1"></div>
+        </div>
+
         <h2>VS</h2>
-        <input type="text" id="input" class="input1" placeholder="Escribe aquí">
-        <div class="busq" id="busq"></div>
+
+        <div class="resultados">
+            <input type="text" id="input2" class="input1" placeholder="Escribe aquí">
+            <div class="busq" id="busq2"></div>
+        </div>
     </main>
+    <script src="main.js"></script>
 </body>
 </html>
