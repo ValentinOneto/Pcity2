@@ -69,11 +69,35 @@ h2{
 }
 
 input{
-    height: 50px;
-    width: 300px;
+    height: 55px;
+    width: 345px;
     background-color: #D9D9D9;
-    border: #D9D9D9;
+    border: none;
     font-size: 25px;
     font-family: 'crimson text';
     font-weight: 500;
+
+}
+
+.filtros{
+    display: flex;
+    justify-content: space-between;
+}
+
+.filtro{
+    background-color:white;
+    border: none;
+    font-family: 'crimson text';
+    font-weight: 600;
+    font-size: 15px;
+
+    &.filtro:hover{
+        background-color: #D9D9D9;
+        cursor: pointer;
+    }
+
+}
+.filtro-seleccionado{
+    background-color: #D9D9D9;
+    border: none;
 }

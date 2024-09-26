@@ -33,3 +33,11 @@ function setupAutocomplete(input, busq, options) {
         }
     });
 }
+const boton = document.querySelectorAll(".filtro");
+boton.forEach(filtro =>{
+    filtro.addEventListener("click", function(){
+        boton.forEach(f => f.classList.remove("filtro-seleccionado"))
+        
+        this.classList.add("filtro-seleccionado");
+    });
+})
