@@ -81,7 +81,7 @@ input{
 
 .filtros{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .filtro{
@@ -89,7 +89,7 @@ input{
     border: none;
     font-family: 'crimson text';
     font-weight: 600;
-    font-size: 15px;
+    font-size: 15.8px;
 
     &.filtro:hover{
         background-color: #D9D9D9;

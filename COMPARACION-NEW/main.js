@@ -36,8 +36,17 @@ function setupAutocomplete(input, busq, options) {
 const boton = document.querySelectorAll(".filtro");
 boton.forEach(filtro =>{
     filtro.addEventListener("click", function(){
-        boton.forEach(f => f.classList.remove("filtro-seleccionado"))
-        
+        boton.forEach(f => f.classList.remove("filtro-seleccionado"));
+
         this.classList.add("filtro-seleccionado");
+
+        const botonFilt = this.textContent;
+        const otroBusq = Array.from(boton).filter(b => b !== this);
+
+        otroBusq.forEach(f =>{
+            if(f.textContent == botonFilt){
+                f.classList.add("filtro-seleccionado");
+            }
+        })
     });
 })
