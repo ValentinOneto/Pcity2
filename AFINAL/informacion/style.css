@@ -5,7 +5,7 @@ body{
     width: 100vw;
 }
 header{
-    height: 18%;
+    height: 15%;
     width: 100%;
     background-color:#101E35;
     z-index: -1;
@@ -30,13 +30,16 @@ nav{
     font-size: 25px;
     background-color:#101E35;
     border: none;
-    text-decoration: underline;
     transition: 0,3s ease;
 
     &:hover{
         cursor:pointer;
         scale: 1.03;
     }
+}
+
+.log{
+    margin-top: -2%;
 }
 
 .busc{
@@ -96,11 +99,24 @@ nav{
 }
 
 section{
-    background-image: url(../../recursos/img/fondo.png);
-    height: 40%;
+    height: 35%;
     width: 100%;
+    background-image: url(../../recursos/img/fondo.png);
     background-position: center;
-    background-repeat: repeat-y;
     background-size: cover;
-    
+    margin-top: 0%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1{
+    font-family: 'inter';
+    font-weight: bolder;
+    font-size: 4.5rem;
+}
+
+h2{
+    font-family: 'crimson text';
+    margin-top: -4%;
 }
