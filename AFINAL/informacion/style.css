@@ -45,7 +45,7 @@ nav{
     border-radius: 5px;
     margin-top: 20px;
     border: solid;
-    border-color: #101E35;
+    border-color: #103263;
     border-width: 3px;
     font-size: larger;
     background-color: white;
@@ -93,4 +93,14 @@ nav{
 .busqs div:last-child {
     border-bottom: none;
     border-radius: 0 0 10px 10px;
+}
+
+section{
+    background-image: url(../../recursos/img/fondo.png);
+    height: 40%;
+    width: 100%;
+    background-position: center;
+    background-repeat: repeat-y;
+    background-size: cover;
+    
 }
