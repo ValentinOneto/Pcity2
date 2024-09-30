@@ -1,0 +1,40 @@
+body{
+    margin: 0%;
+    padding: 0%;
+    height: 100vh;
+    width: 100vw;
+}
+header{
+    height: 18%;
+    width: 100%;
+    background-color:#1E90FF;
+    z-index: -1;
+    margin-top: 0%;
+    display: flex;
+    justify-content: space-between;
+    }
+
+nav{
+    width: 550px;
+    height: 80px;
+    display: flex;
+    justify-content: space-evenly;
+    margin-right: 15px;
+    margin-top: 5px;
+}
+
+.armar,.comparar,.inicio{
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-size: 28px;
+    background-color:#1E90FF;
+    border: none;
+    text-decoration: underline;
+    transition: 0,3s ease;
+
+    &:hover{
+        cursor:pointer;
+        scale: 1.03;
+    }
+}
