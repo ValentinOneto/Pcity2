@@ -59,6 +59,34 @@ h1{
     align-items: center;
 }
 
+h2{
+    margin-left: 3%;
+    font-family: "crimson";
+    font-weight: 500;
+    font-style: normal;
+    font-size: 40px;
+}
+
+input{
+    margin-left: 3%;
+    height: 5%;
+    width: 35%;
+    border-radius: 8px;
+    background-image: url("../recursos/img/lupa.buscador.png");
+    background-repeat: no-repeat;
+}
+
 .logo{
     padding-right: 50px;
+}
+
+main{
+    width: 100%;
+    height: 83% ;
+    border: solid;
+}
+
+button{
+height: 100%;
+width: 100%;
 }
