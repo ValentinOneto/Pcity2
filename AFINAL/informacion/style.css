@@ -7,7 +7,7 @@ body{
 header{
     height: 15%;
     width: 100%;
-    background-color:#101E35;
+    background-color: #101E35;
     z-index: -1;
     margin-top: 0%;
     display: flex;
@@ -30,6 +30,7 @@ nav{
     font-size: 25px;
     background-color:#101E35;
     border: none;
+    color: #D6D6D6;
     transition: 0,3s ease;
 
     &:hover{
@@ -102,6 +103,7 @@ section{
     height: 35%;
     width: 100%;
     background-image: url(../../recursos/img/fondo.png);
+    background-color: #233552;
     background-position: center;
     background-size: cover;
     margin-top: 0%;

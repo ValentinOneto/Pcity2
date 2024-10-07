@@ -1,5 +1,3 @@
-import { onEvent, sendEvent, startServer } from "soquetic";
-
 document.addEventListener('DOMContentLoaded', () => {
     const options = ["aiekas","skibidi", "toilet", "sigma","yakatai","aieka","alezito","ñomñom","mi pueblo no se toca"];
     const input1 = document.getElementById('input1');
