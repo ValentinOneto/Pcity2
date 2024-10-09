@@ -1,12 +1,12 @@
 {
-    "Tus Pcs": 
+    "Pcs": 
     {
       "nombre": "",
       "procesador": "",
       "mother": "",
       "RAM": "",
-      "Tarjeta_Grafica": 
-      "Disco SSD": ""
+      "Tarjeta_Grafica": "",
+      "Disco SSD": "",
       "Fuente": ""
     }
 
