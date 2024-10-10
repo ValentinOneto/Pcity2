@@ -9,4 +9,3 @@ console.log(Login);
 
 let Pcs = fs.readFileSync("Pcs.json", "utf8")
 console.log(Pcs);
-
