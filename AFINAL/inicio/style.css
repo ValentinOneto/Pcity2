@@ -16,19 +16,18 @@ header{
     }
 
 nav{
-    width: 580px;
-    height: 80px;
+    width: 40%;
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    margin-right: 20px;
-    margin-top: 5px;
+    margin-right: 2%;
 }
 
 .armar,.comparar,.info,.log{
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     font-weight: 600;
-    font-size: 25px;
+    font-size: 200%;
     background-color:#101E35;
     border: none;
     color: #A6A6A6;
@@ -40,15 +39,11 @@ nav{
     }
 }
 
-.log{
-    margin-top: -2%;
-}
-
 .busc{
     height: 45px;
-    width: 550px;
+    width: 150%;
     border-radius: 12px;
-    margin-top: 20px;
+    margin-top: 5%;
     border: solid;
     border-color: #103263;
     border-width: 3px;
@@ -116,14 +111,14 @@ section{
 h1{
     font-family: 'inter';
     font-weight: bolder;
-    font-size: 4rem;
-    margin-top: -4%;
+    font-size: 5rem;
+    margin-top: -1%;
 }
 
 h2{
     font-family: 'inter';
-    margin-top: -4%;
-    font-size: 1.8rem;
+    margin-top: -2.5%;
+    font-size: 2.5rem;
     font-style: bold;
 }
 
