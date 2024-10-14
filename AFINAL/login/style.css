@@ -43,7 +43,6 @@ h1{
 .pcity{
     height: 50px;
     width: 55px;
-    margin-top: -22%;
     margin-left: 15%;
 }
 
@@ -74,18 +73,20 @@ input{
 p{
     color: #c8c8c8;
     font-size: 20px;
+    margin-top: 4%;
 }
 
 button{
     font-weight: 500;
     font-size: larger;
     font-family: 'crimson text';
-    background-color: #384D6E;
+    background-color: rgb(55, 104, 172);
+    color: white;
     border-radius: 10px;
     border-color: transparent;
-    width: 6em;
+    width: 8em;
     height: 2em;
-    color:#F5F5F5;
+    margin-top: 6%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -98,14 +99,14 @@ button{
 }
 
 .regist{
-    background-color: #384D6E;
+    background-color: #6d798d;
     color: #F5F5F5;
-    width: 35%;
-    height: 8%;
+    width: 12rem;
+    height: 2.2rem;
     display: flex;
     justify-content: center;
     border-radius: 5px;
-    margin-top: 5%;
+    margin-top: -4%;
 }
 
 article{
