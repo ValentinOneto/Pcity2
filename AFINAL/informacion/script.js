@@ -30,4 +30,28 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     setupAutocomplete(input1, busq1, options);
+    
+    let componentes = document.querySelectorAll(".comp");
+    let titu = document.getElementById("titu");
+    componentes.forEach(componente => {
+        componente.addEventListener("click", ()=> { 
+        
+        componentes.forEach(c => c.classList.remove("filtro"));
+        componente.classList.add("filtro")
+
+        let titulo = componente.parentElement.textContent.trim();
+        titulo.textContent = titulo;
+    });
+});
+
+let botones = document.querySelectorAll(".boton");
+botones.forEach(boton => {
+    boton.addEventListener("click", ()=> { 
+
+        botones.forEach(c => c.classList.remove("filtro"));
+        boton.classList.add("filtro");
+    });
+});
+
+
 });

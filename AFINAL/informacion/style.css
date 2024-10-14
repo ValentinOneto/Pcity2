@@ -4,6 +4,7 @@ body{
     height: 100vh;
     width: 100vw;
     overflow-x: hidden;
+    overflow-y: hidden;
 }
 header{
     height: 15%;
@@ -16,18 +17,18 @@ header{
     }
 
 nav{
-    width: 40%;
+    width: 45%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-right: 2%;
+    margin-top: 1%;
 }
 
-.armar,.comparar,.info,.log{
+.armar,.comparar,.inicio,.log{
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     font-weight: 600;
-    font-size: 200%;
+    font-size: 1.5rem;
     background-color:#101E35;
     border: none;
     color: #A6A6A6;
@@ -41,9 +42,9 @@ nav{
 
 .busc{
     height: 45px;
-    width: 150%;
+    width: 100%;
     border-radius: 12px;
-    margin-top: 5%;
+    margin-top: 3%;
     border: solid;
     border-color: #103263;
     border-width: 3px;
@@ -128,6 +129,7 @@ main{
     margin-top: 0%;
     display: flex;
     align-items: center;
+    justify-content: space-evenly;
 }
 
 aside{
@@ -157,6 +159,10 @@ button{
     padding: 0%;
     border: none;
     box-sizing:content-box;
+    font-family: 'Crimson text';
+    font-size: 1em;
+    font-weight: 600;
+    color: #00000040;
     margin-top: -5%;
     background-color: transparent;
     transition: 0,3s ease;
@@ -165,4 +171,27 @@ button{
         cursor:pointer;
         scale: 1.03;
     }
+}
+
+section{
+    background-color: #D9D9D9;
+    height: 90%;
+    width: 70%;
+    border-radius: 10px;
+}
+
+.titu{
+    font-size: 2.5rem;
+    display: flex;
+    justify-content: center;
+    margin-top: 1%;
+}
+
+.desc{
+    margin-top: -3%;
+}
+
+.filtro{
+    opacity: 1;
+    color: #000;
 }
