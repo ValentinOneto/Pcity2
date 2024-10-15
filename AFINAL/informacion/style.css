@@ -147,6 +147,10 @@ aside{
 .comp{
     width: 50%;
     opacity: 0.5;
+    
+    &:hover{
+        cursor:pointer;
+    }
 }
 
 button{
@@ -194,4 +198,11 @@ section{
 .filtro{
     opacity: 1;
     color: #000;
+}
+
+.boton{
+transition: none;
+    &:hover{
+        cursor: default;
+    }
 }

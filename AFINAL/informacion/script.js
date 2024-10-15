@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
         componentes.forEach(c => c.classList.remove("filtro"));
         componente.classList.add("filtro")
 
-        let titulos = componente.nextSibling.textContent;
+        let titulos = componente.nextSibling.textContent.trim();
         titulo.textContent = titulos;
 
         if(titulo.textContent == "Procesador"){
@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
             else if(titulo.textContent =="RAM"){
                 descripcion.innerHTML = `La memoria RAM (Random Access Memory) es el almacenamiento temporal que usa la computadora para acceder rápidamente a los datos que necesita mientras está encendida.`;
             }
-            else if(titulo.textContent =="Gráfica"){
+            else if(titulos.textContent =="Gráfica"){
                 descripcion.innerHTML = `La tarjeta gráfica es el componente encargado de renderizar las imágenes, videos y gráficos que ves en la pantalla, fundamental para tareas como videojuegos y edición de video.`;
             }
 
