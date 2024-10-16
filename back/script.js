@@ -1,3 +1,4 @@
+// @ts-ignore
 import { onEvent, sendEvent, startServer } from "soquetic";
 import fs from "fs"
 
