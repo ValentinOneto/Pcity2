@@ -86,7 +86,6 @@ button{
     border-color: transparent;
     width: 8em;
     height: 2em;
-    margin-top: 6%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -106,7 +105,6 @@ button{
     display: flex;
     justify-content: center;
     border-radius: 5px;
-    margin-top: -4%;
 }
 
 article{
@@ -115,4 +113,22 @@ article{
     align-items: center;
     justify-content: space-between;
     font-family: 'crimson text';
+}
+
+.error{
+    color: red;
+}
+
+.abajo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 6%;
+}
+
+footer{
+position: relative;
+bottom: 28%;
+width: 20%;
+left: 41%;
 }

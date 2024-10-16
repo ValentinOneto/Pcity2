@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    <script type="module" src="script.js" defer></script>
+    <script type="module" src="main.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.4/socket.io.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,20 +16,29 @@
 </head>
 <body>
 
+<section></section>
+
 <main>
     <article>
         <div class="titulo">
             <h1>Bienvenido a</h1> <p><img class="pcity" src="../../recursos/img/logo2.png"></p>
         </div>
         <div class="texto">
-            <input class="input-arriba" type="text" placeholder="Nombre">
-            <input type="text" placeholder="Contraseña">
+            <input id="nombre" class="input-arriba" type="text" placeholder="Nombre">
+            <input id="contra" type="text" placeholder="Contraseña">
+            
         </div>
-        <button>Iniciar sesión</button>
-        <p>o</p>
-        <button class="regist">Registrarse</button>
+        <div class="abajo">
+            <button id="iniciar">Iniciar sesión</button>
+            <p>o</p>
+            <button class="regist" id="regist">Registrarse</button>
+        </div>
     </article>
 </main>
+
+<footer>
+    <p>Usuario o contraseña incorrecta</p>
+</footer>
 
 </body>
 </html>
