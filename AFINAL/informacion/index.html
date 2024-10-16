@@ -6,7 +6,8 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <script type="module" src="script.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.4/socket.io.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.4/socket.io.js"></script>
+    <script src="socket.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
@@ -22,16 +23,32 @@
             <div class="busqs" id="busq1"></div>
         </div>
         <nav>
-            <button class="inicio" onclick="location.href='../inicio/index.html'">Inicio</button>
-            <button class="armar" onclick="location.href='../armar-pc/index.html'">Arma tu PC</button>
-            <button class="comparar" onclick="location.href='../comparacion/index.html'">Comparar</button>
-            <button class="log"><img src="../../recursos/img/personita.png"></button>
+            <button class="inicio" onclick="location.href='../../AFINAL/inicio/index.html'">Inicio</button>
+            <button class="armar" onclick="location.href='../../AFINAL/armar-pc/index.html'">Arma tu PC</button>
+            <button class="comparar" onclick="location.href='../../AFINAL/comparacion/index.html'">Comparar</button>
+            <button class="log" onclick="location.href='../../AFINAL/login/index.html'"><img src="../../recursos/img/personita.png"></button>
         </nav>
     </header>
 
-    <section>
+    <article>
         <h1>Información</h1>
-        <h2>Aprendé todo sobre los componentes de la PC.</h2>
-    </section>
+        <h2>Aprendé todo sobre los componentes de una PC.</h2>
+    </article>
+
+    <main>
+        <aside>
+            <button class="boton"><img class="comp" src="../../recursos/img/procesador.png">Procesador</button>
+            <button class="boton"><img class="comp" src="../../recursos/img/fuente.png">Fuente</button>
+            <button class="boton"><img class="comp" src="../../recursos/img/mother.png">Motherboard</button>
+            <button class="boton"><img class="comp" src="../../recursos/img/disco.png">Disco SSD</button>
+            <button class="boton"><img class="comp" src="../../recursos/img/ram.png">RAM</button>
+            <button class="boton"><img class="comp" src="../../recursos/img/grafica.png">Gráfica</button>
+        </aside>
+        
+        <section>
+            <p class="titu" id="titu"></p>
+            <p class="desc" id="desc"></p>
+            </section>
+    </main>
 </body>
 </html>
