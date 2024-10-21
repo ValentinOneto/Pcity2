@@ -2,13 +2,15 @@
 import { onEvent, sendEvent, startServer } from "soquetic";
 import fs from "fs"
 
-let datos = fs.readFileSync("Datos.json", "utf8")
+let datosfun = fs.readFileSync("Datos.json", "utf8")
 console.log(datos);
 
-let Login = fs.readFileSync("Login.json", "utf8")
+let loginfun = fs.readFileSync("Login.json", "utf8")
 console.log(Login);
 
-let Pcs = fs.readFileSync("Pcs.json", "utf8")
+let pcsfun = fs.readFileSync("Pcs.json", "utf8")
 console.log(Pcs);
 
-onEvent()
+onEvent("Datos", datosfun)
+onEvent("Login", loginfun)
+onEvent("Pcs", pcsfun)
