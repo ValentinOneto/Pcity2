@@ -23,20 +23,41 @@
         <div class="titulo">
             <h1>Bienvenido a</h1> <p><img class="pcity" src="../../recursos/img/logo2.png"></p>
         </div>
-        <div class="texto">
+
+        <div class="texto" id="login">
             <input id="nombre" class="input-arriba" type="text" placeholder="Nombre">
             <input id="contra" type="text" placeholder="Contraseña">
-            
         </div>
+
+        <div class="non texto" id="signup">
+            <input id="nombre2" class="input-arriba" type="text" placeholder="Nombre">
+            <input id="contra2" type="text" placeholder="Contraseña">
+        </div>
+
+        <p class="non error" id="error">Usuario o contraseña incorrecta</p> 
+
         <div class="abajo">
-            <button id="iniciar">Iniciar sesión</button>
-            <p>o</p>
-            <button class="regist" id="regist">Registrarse</button>
+            <button id="iniciar" class="iniciar">Iniciar sesión</button> 
+            <button id="registrar" class="regist non">Registrarse</button> 
+
+            <div class="crearCuenta">
+                <p id="crearCuenta">¿No tenes una cuenta?</p> 
+                <button class="crear" id="crear">Crea una cuenta</button>
+            </div>
+
+            <div class="crearCuenta">
+                <p id="iniciarSesion" class="non">¿Ya tenes una cuenta?</p> 
+                <button class="crear non" id="iniciar">Inicia sesión</button>
+            </div>
+
         </div>
+      
     </article>
-    <p class="err" id="error">Usuario o contraseña incorrecta</p>
+    
 </main>
 
 
 </body>
 </html>
+
+<button class="regist" id="regist">Registrarse</button>
