@@ -15,15 +15,3 @@ onEvent("Datos", datosfun)
 onEvent("Login", loginfun)
 onEvent("Pcs", pcsfun)
 
-onEvent("Datos", (data) => {
-    const usuarios
-    fs.writeFile("Login.json", JSON.stringify(usuarios, null, 2));
-  });
-
-  onEvent("Login", (data) => {
-    
-  });
-
-  onEvent("Pcs", (data) => {
-    
-  });
