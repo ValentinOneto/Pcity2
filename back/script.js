@@ -20,7 +20,7 @@ function sesionfun (login) {
 
 
 
-onEvent("Datos", sesionfun);
-onEvent("sesion", loginfun);
-onEvent("Pcs", pcsfun);
+
+onEvent("sesion", sesionfun);
+
 startServer();
