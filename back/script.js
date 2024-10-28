@@ -2,7 +2,7 @@
 import { onEvent, sendEvent, startServer } from "soquetic";
 import fs from "fs"
 
-function loginfun (login) {
+function sesionfun (login) {
   try {
     let Login = fs.readFileSync("back/Login.json", "utf8")
     Login = JSON.parse(Login);
@@ -20,7 +20,7 @@ function loginfun (login) {
 
 
 
-onEvent("Datos", datosfun);
-onEvent("Login", loginfun);
+onEvent("Datos", sesionfun);
+onEvent("sesion", loginfun);
 onEvent("Pcs", pcsfun);
 startServer();
