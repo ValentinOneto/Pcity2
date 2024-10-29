@@ -58,14 +58,14 @@ input {
     font-size: 18px;
 }
 
-.iniciar {
+.registrar {
     font-size: 1.6em;
-    background-color: rgb(55, 104, 172);
+    background-color: rgb(55, 75, 103);
     color: white;
     border-radius: 6px;
     border: none;
-    margin-top: 10%;
-    width: 13rem;
+    margin-top: 5%;
+    width: 12rem;
     height: 3rem;
     cursor: pointer;
 }
