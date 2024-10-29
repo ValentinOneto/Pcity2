@@ -1,6 +1,6 @@
-const nombreInput = document.getElementById("nombre");
-const contraseñaInput = document.getElementById("contraseña");
-
+    const nombreInput = document.getElementById("nombre");
+    const contraseñaInput = document.getElementById("contraseña");
+    const fondo = document.getElementById("body");
 
 function registrarse(){
     const nombre = nombreInput.value;
@@ -14,3 +14,9 @@ function registrarse(){
         }  
     }
     )}
+
+    function inicio(){
+        window.location.href = "../inicio/index.html";
+    }
+
+    fondo.addEventListener('click', inicio)

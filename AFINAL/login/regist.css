@@ -6,7 +6,14 @@ body {
     overflow-x: hidden;
 }
 
-section{
+saasd {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.fondo{
     background-image: url(../../recursos/fondo-login.png);
     filter: blur(8px);
     height: 100%;
