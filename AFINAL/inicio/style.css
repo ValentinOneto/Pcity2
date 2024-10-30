@@ -5,6 +5,12 @@ body{
     width: 100vw;
     overflow-x: hidden;
 }
+
+.inicio{
+    width: 100%;
+    height: 100%;
+}
+
 header{
     height: 15%;
     width: 100%;
@@ -13,7 +19,7 @@ header{
     margin-top: 0%;
     display: flex;
     justify-content: space-between;
-    }
+}
 
 nav{
     width: 45%;
@@ -30,7 +36,7 @@ nav{
     background-color: transparent;
     border: none;
     color: #A6A6A6;
-    margin-top: -2%;
+    margin-right: 3%;
     transition: 0,3s ease;
 
     &:hover{
@@ -106,27 +112,31 @@ section{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
 
-h1{
-    font-family: 'inter';
-    font-weight: bolder;
-    font-size: 5rem;
-    margin-top: -1%;
-}
+    .pcity{
+        height: 110px;
+        width: 140px;
+        margin-left: 2%;
+        margin-bottom: -1.5%;
+    }
 
-h2{
-    font-family: 'inter';
-    margin-top: -2.5%;
-    font-size: 2.5rem;
-    font-style: bold;
-}
-
-.pcity{
-    height: 80px;
-    width: 100px;
-    position:relative;
-    top: 15%;
+    h1{
+        font-family: 'inter';
+        font-weight: bolder;
+        font-size: 5rem;
+        margin-top: -1%;
+        margin-left: 16%;
+        width: 60%;
+        display: flex;
+        
+    }
+    
+    h2{
+        font-family: 'inter';
+        margin-top: -5%;
+        font-size: 2.5rem;
+        font-style: bold;
+    }
 }
 
 p{
@@ -144,11 +154,9 @@ p{
     justify-content: flex-start;
     align-items:center;
     box-sizing: border-box;
-    transition: 0,3s ease;
 
     &:hover{
         cursor:pointer;
-        scale: 1.01;
     }
 }
 
@@ -164,4 +172,230 @@ article{
     flex-wrap: wrap;
     justify-content: space-evenly;
     gap:10px;
+}
+
+.login {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f2f2f2;
+    border-radius: 30px;
+    height: 50%;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Crimson Text', serif;
+    z-index: 100;
+    border: 1px solid rgb(199, 199, 199);
+
+    .titulo {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      margin-top: 5%;
+      width: 100%;
+
+        h1 {
+            font-family: 'Inter', sans-serif;
+            font-weight: bolder;
+            font-size: 2rem;
+            width: 100%;
+            margin-left: 7%;
+            margin-top: 5%;
+        }
+
+        .pcity {
+            height: 50px;
+            width: 55px;
+            margin-left: -100%;
+        }
+    }
+
+    .texto {
+    display: flex;
+    flex-direction: column;
+    margin-top: -15%;
+    gap: 10px;
+    }
+
+    input {
+        background-color: white;
+        border-radius: 4px;
+        width: 17em;
+        height: 2.4em;
+        border: none;
+        font-size: 18px;
+        border: solid 1px rgb(189, 189, 189);
+    }
+    
+    .registrar {
+        font-size: 1.6em;
+        background-color: rgb(55, 75, 103);
+        color: white;
+        border-radius: 6px;
+        border: none;
+        margin-top: 10%;
+        width: 12rem;
+        height: 3rem;
+        cursor: pointer;
+    }
+    
+    .error {
+        color: rgb(214, 68, 68);
+        font-size: 1rem;
+        font-weight: 600;
+        position: absolute;
+        bottom: 27%;
+        left: 23%;
+    }
+    
+    .crearCuenta {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        justify-content: center;
+        width: 80%;
+
+        .cuenta{
+            font-size: medium;
+        }
+        
+        .crear {
+            border: none;
+            color: #78a1ea;
+            background-color: transparent;
+            text-decoration: underline;
+            cursor: pointer;
+            margin-top: -4%;
+        }
+    }
+    
+}
+
+.sesion {
+    z-index: 100;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f2f2f2;
+    border-radius: 30px;
+    height: 50%;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Crimson Text', serif;
+    border: 1px solid rgb(199, 199, 199);
+
+    .titulo {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      margin-top: 5%;
+      width: 100%;
+
+        h1 {
+            font-family: 'Inter', sans-serif;
+            font-weight: bolder;
+            font-size: 2rem;
+            width: 100%;
+            margin-left: 7%;
+            margin-top: 5%;
+        }
+
+        .pcity {
+            height: 50px;
+            width: 55px;
+            margin-left: -100%;
+        }
+    }
+
+    .texto {
+    display: flex;
+    flex-direction: column;
+    margin-top: -15%;
+    gap: 10px;
+    }
+
+    input {
+        background-color: white;
+        border-radius: 4px;
+        width: 17em;
+        height: 2.4em;
+        border: none;
+        font-size: 18px;
+        border: solid 1px rgb(189, 189, 189);
+    }
+    
+    .iniciar {
+        font-size: 1.6em;
+        background-color: rgb(55, 104, 172);
+        color: white;
+        border-radius: 6px;
+        border: none;
+        margin-top: 10%;
+        width: 13rem;
+        height: 3rem;
+        cursor: pointer;
+    }
+    
+    .error {
+        color: rgb(214, 68, 68);
+        font-size: 1rem;
+        font-weight: 600;
+        position: absolute;
+        bottom: 27%;
+        left: 10%;
+    }
+    
+    .crearCuenta {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    
+    .cuenta {
+        font-size: medium;
+    }
+    
+    .crear {
+        border: none;
+        color: #78a1ea;
+        background-color: transparent;
+        text-decoration: underline;
+        cursor: pointer;
+        margin-top: -4%;
+    }
+}
+
+
+.non{
+    display: none;
+}
+
+.fondo{
+    filter: blur(5px);
+}
+
+.cruz{
+    height: 1px;
+    width: 1px;
+    margin-bottom: 2%;
+
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+.cruz img{
+    height: 12px;
+    width: 12px;
+    position: relative;
+    bottom: 105px;
+    margin-left: 140px;
 }

@@ -6,13 +6,6 @@ body {
     overflow-x: hidden;
 }
 
-saasd {
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-}
-
 .fondo{
     background-image: url(../../recursos/fondo-login.png);
     filter: blur(8px);
@@ -20,85 +13,86 @@ saasd {
     width: 100%;
 }
 
-main {
+.login {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     background-color: #f2f2f2;
     border-radius: 30px;
     height: 50%;
     width: 25%;
-    position: absolute;
-    right: 37%;
-    top: 20%;
     display: flex;
     flex-direction: column;
     align-items: center;
     font-family: 'Crimson Text', serif;
-}
 
-h1 {
-    text-align: center;
-    font-family: 'Inter', sans-serif;
-}
+    .titulo {
+        display: flex;
+        flex-direction: row;
+    }
 
-.titulo {
-    display: flex;
-    flex-direction: row;
-}
+    h1 {
+        text-align: center;
+        font-family: 'Inter', sans-serif;
+    }
 
-.pcity {
-    height: 50px;
-    width: 55px;
-    margin-left: 15%;
-}
+    .pcity {
+        height: 50px;
+        width: 55px;
+        margin-left: 15%;
+    }
 
-.texto {
+    .texto {
     display: flex;
     flex-direction: column;
     gap: 10px;
-}
+    }
 
-input {
-    background-color: white;
-    border-radius: 4px;
-    width: 17em;
-    height: 2.4em;
-    border: none;
-    font-size: 18px;
-}
-
-.registrar {
-    font-size: 1.6em;
-    background-color: rgb(55, 75, 103);
-    color: white;
-    border-radius: 6px;
-    border: none;
-    margin-top: 10%;
-    width: 12rem;
-    height: 3rem;
-    cursor: pointer;
-}
-
-.error {
-    color: rgb(214, 68, 68);
-    font-size: 1rem;
-    font-weight: 600;
-    position: absolute;
-    bottom: 28%;
-    left: 30%
-}
-
-.crearCuenta {
-    display: flex;
-    flex-direction: row;
-    font-size: large;
-    gap: 5px;
-}
-
-.crear {
-    border: none;
-    color: #78a1ea;
-    background-color: transparent;
-    text-decoration: underline;
-    cursor: pointer;
+    input {
+        background-color: white;
+        border-radius: 4px;
+        width: 17em;
+        height: 2.4em;
+        border: none;
+        font-size: 18px;
+    }
+    
+    .registrar {
+        font-size: 1.6em;
+        background-color: rgb(55, 75, 103);
+        color: white;
+        border-radius: 6px;
+        border: none;
+        margin-top: 10%;
+        width: 12rem;
+        height: 3rem;
+        cursor: pointer;
+    }
+    
+    .error {
+        color: rgb(214, 68, 68);
+        font-size: 1rem;
+        font-weight: 600;
+        position: absolute;
+        bottom: 28%;
+        left: 30%
+    }
+    
+    .crearCuenta {
+        display: flex;
+        flex-direction: row;
+        font-size: large;
+        gap: 5px;
+    }
+    
+    .crear {
+        border: none;
+        color: #78a1ea;
+        background-color: transparent;
+        text-decoration: underline;
+        cursor: pointer;
+    }
 }
 
 .non{

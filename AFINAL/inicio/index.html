@@ -15,43 +15,87 @@
 <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <img src="../../recursos/img/logo.png">
-        <div class="buscador">
-            <input type="text" class="busc" id="input1" placeholder="Buscar">
-            <div class="busqs" id="busq1"></div>
+
+    <main id="mainSesion" class="sesion non">
+        <div class="titulo">
+            <h1>Bienvenido a</h1> 
+            <p><img class="pcity" src="../../recursos/img/logo2.png"></p>
         </div>
-        <nav>
-            <button class="info" onclick="location.href='../../AFINAL/informacion/index.html'">Información</button>
-            <button class="armar" onclick="location.href='../../AFINAL/armar-pc/index.html'">Arma tu PC</button>
-            <button class="comparar" onclick="location.href='../../AFINAL/comparacion/index.html'">Comparar</button>
-            <button class="log" onclick="location.href='../../AFINAL/login/index.html'"><img src="../../recursos/img/personita.png"></button>
-        </nav>
-    </header>
+        <button class="cruz" id="cruzSesion"><img src="../../recursos/img/cruzBoton.png"></button>
+        <div class="texto" id="login">
+            <input id="nombreS" type="text" placeholder="Nombre">
+            <input id="contra" type="password" placeholder="Contraseña">
+            <p class="non error" id="error">Usuario o contraseña incorrecta</p> 
+        </div>
+    
+    
+        <button id="iniciar" class="iniciar">Iniciar sesión</button>
+            
+        <div class="crearCuenta">
+            <p class="cuenta">¿No tienes una cuenta?</p> 
+            <button id="crear" class="crear">Crea una cuenta</button>
+        </div>
+    </main>
 
-    <section>
-        <h1>Bienvenido a <img class="pcity" src="../../recursos/img/pcity.png"></h1>
-        <h2>Armá, compará y aprendé</h2>
-    </section>
+    <main id="mainRegistrar" class="login non">
+        <div class="titulo">
+            <h1>Bienvenido a</h1> 
+            <p><img class="pcity" src="../../recursos/img/logo2.png"></p>
+        </div>
+        <button class="cruz" id="cruzRegistrar"><img  src="../../recursos/img/cruzBoton.png"></button>
+        <div class="texto" id="login">
+            <input id="nombrR" type="text" placeholder="Nombre">
+            <input id="contraseña" type="password" placeholder="Contraseña">
+            <p class="non error" id="error">Error al crear cuenta</p> 
+        </div>
+    
+        <button class="registrar">Registrarse</button>
+            
+        <div class="crearCuenta">
+            <p class="cuenta">¿Ya tienes una cuenta?</p> 
+            <button id="crear" class="crear">Inicia sesión</button>
+        </div>
+    </main>
 
-    <p>Componentes populares</p>
-    <article>
-        <button class="comp"><img class="foto" src="../../recursos/img/inputFlecha.png"> aaaaa</button>
-        <button class="comp"><img class="foto" src="../../recursos/img/inputFlecha.png"> aaaaa</button>
-        <button class="comp"><img class="foto" src="../../recursos/img/inputFlecha.png"> aaaaa</button>
-        <button class="comp"><img class="foto" src="../../recursos/img/inputFlecha.png"> aaaaa</button>
-        <button class="comp"><img class="foto" src="../../recursos/img/inputFlecha.png"> aaaaa</button>
-        <button class="comp"><img class="foto" src="../../recursos/img/inputFlecha.png"> aaaaa</button>
-        <button class="comp"><img class="foto" src="../../recursos/img/inputFlecha.png"> aaaaa</button>
-        <button class="comp"><img class="foto" src="../../recursos/img/inputFlecha.png"> aaaaa</button>
-        <button class="comp"><img class="foto" src="../../recursos/img/inputFlecha.png"> aaaaa</button>
-        <button class="comp"><img class="foto" src="../../recursos/img/inputFlecha.png"> aaaaa</button>
-        <button class="comp"><img class="foto" src="../../recursos/img/inputFlecha.png"> aaaaa</button>
-        <button class="comp"><img class="foto" src="../../recursos/img/inputFlecha.png"> aaaaa</button>
-        <button class="comp"><img class="foto" src="../../recursos/img/inputFlecha.png"> aaaaa</button>
-        <button class="comp"><img class="foto" src="../../recursos/img/inputFlecha.png"> aaaaa</button>
-        <button class="comp"><img class="foto" src="../../recursos/img/inputFlecha.png"> aaaaa</button>
-        <button class="comp"><img class="foto" src="../../recursos/img/inputFlecha.png"> aaaaa</button>
-    </article>
+    <div class="inicio">
+        <header>
+            <img src="../../recursos/img/logo.png">
+            <div class="buscador">
+                <input type="text" class="busc" id="input1" placeholder="Buscar">
+                <div class="busqs" id="busq1"></div>
+            </div>
+            <nav>
+                <button class="info" onclick="location.href='../../AFINAL/informacion/index.html'">Información</button>
+                <button class="armar" onclick="location.href='../../AFINAL/armar-pc/index.html'">Arma tu PC</button>
+                <button class="comparar" onclick="location.href='../../AFINAL/comparacion/index.html'">Comparar</button>
+                <button class="log" id="persona"><img src="../../recursos/img/personita.png"></button>
+            </nav>
+        </header>
+    
+        <section>
+            <h1>Bienvenido a <img class="pcity" src="../../recursos/img/pcity.png"></h1>
+            <h2>Armá, compará y aprendé</h2>
+        </section>
+    
+        <p>Componentes populares</p>
+        <article>
+            <button class="comp"><img class="foto" src="../../recursos/img/inputFlecha.png"> aaaaa</button>
+            <button class="comp"><img class="foto" src="../../recursos/img/inputFlecha.png"> aaaaa</button>
+            <button class="comp"><img class="foto" src="../../recursos/img/inputFlecha.png"> aaaaa</button>
+            <button class="comp"><img class="foto" src="../../recursos/img/inputFlecha.png"> aaaaa</button>
+            <button class="comp"><img class="foto" src="../../recursos/img/inputFlecha.png"> aaaaa</button>
+            <button class="comp"><img class="foto" src="../../recursos/img/inputFlecha.png"> aaaaa</button>
+            <button class="comp"><img class="foto" src="../../recursos/img/inputFlecha.png"> aaaaa</button>
+            <button class="comp"><img class="foto" src="../../recursos/img/inputFlecha.png"> aaaaa</button>
+            <button class="comp"><img class="foto" src="../../recursos/img/inputFlecha.png"> aaaaa</button>
+            <button class="comp"><img class="foto" src="../../recursos/img/inputFlecha.png"> aaaaa</button>
+            <button class="comp"><img class="foto" src="../../recursos/img/inputFlecha.png"> aaaaa</button>
+            <button class="comp"><img class="foto" src="../../recursos/img/inputFlecha.png"> aaaaa</button>
+            <button class="comp"><img class="foto" src="../../recursos/img/inputFlecha.png"> aaaaa</button>
+            <button class="comp"><img class="foto" src="../../recursos/img/inputFlecha.png"> aaaaa</button>
+            <button class="comp"><img class="foto" src="../../recursos/img/inputFlecha.png"> aaaaa</button>
+            <button class="comp"><img class="foto" src="../../recursos/img/inputFlecha.png"> aaaaa</button>
+        </article>
+    </div>
 </body>
 </html>
