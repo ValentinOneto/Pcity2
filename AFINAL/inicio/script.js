@@ -35,7 +35,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 const nombreInputS = document.getElementById("nombreS");
 const nombreInputR = document.getElementById('nombreR')
-const contraseñaInput = document.getElementById("contra");
+const contraseñaInputS = document.getElementById("contraS");
+const contraseñaInputR = document.getElementById("contraR");
 const personaBoton = document.getElementById("persona");
 const mainRegistrar = document.getElementById("mainRegistrar");
 const mainSesion = document.getElementById("mainSesion");
@@ -44,7 +45,10 @@ const botonCrear = document.getElementById("crear");
 const botonRegistrar = document.getElementById("regist");
 const cruzSesion = document.getElementById('cruzSesion');
 const cruzRegistrar = document.getElementById('cruzRegistrar');
-const iniciarBoton = document.getElementById('iniciar')
+const iniciarBoton = document.getElementById('iniciar');
+const errorS = document.getElementById('errorS');
+const errorR = document.getElementById('errorR');
+
 
 function persona(){
     mainSesion.classList.remove("non");
@@ -63,23 +67,39 @@ function salirRegistrar() {
     mainRegistrar.classList.add("non");
     fondo.classList.remove("fondo");
 }
-cruzSesion.addEventListener('click', salirRegistrar);
+cruzRegistrar.addEventListener('click', salirRegistrar);
 
 
 function iniciarSesion() {
-    const nombre = nombreInput.value;
-    const contraseña = contraseñaInput.value;
+    const nombre = nombreInputS.value;
+    const contraseña = contraseñaInputS.value;
 
     postData("sesion", {nombre, contraseña}, (response) => {
         if (response.ok) {
             window.location.href = "../inicio/index.html";
             personaBoton.classList.add("non");
         } else {
-            error.classList.remove("non");
+            errorS.classList.remove("non");
         }
     });
 }
 iniciarBoton.addEventListener("click", iniciarSesion);
+
+function registrarse (){
+    const nombre = nombreInputR;
+    const contraseña = contraseñaInputR;
+
+    postData("registrar", {nombre, contraseña},(response) =>{
+        if (response.ok) {
+            window.location.href = "../inicio/index.html";
+            personaBoton.classList.add("non");
+        } else {
+            errorR.classList.remove("non");
+        }
+    })
+
+
+}
 
 
 function crearCuenta(){
