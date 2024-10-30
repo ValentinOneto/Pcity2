@@ -37,17 +37,25 @@ const nombreInputS = document.getElementById("nombreS");
 const nombreInputR = document.getElementById('nombreR')
 const contraseñaInputS = document.getElementById("contraS");
 const contraseñaInputR = document.getElementById("contraR");
+
+
 const personaBoton = document.getElementById("persona");
 const mainRegistrar = document.getElementById("mainRegistrar");
 const mainSesion = document.getElementById("mainSesion");
 const fondo = document.querySelector(".inicio");
-const botonCrear = document.getElementById("crear");
 const botonRegistrar = document.getElementById("regist");
 const cruzSesion = document.getElementById('cruzSesion');
 const cruzRegistrar = document.getElementById('cruzRegistrar');
 const iniciarBoton = document.getElementById('iniciar');
 const errorS = document.getElementById('errorS');
 const errorR = document.getElementById('errorR');
+const botonVolverIniciar = document.getElementById('iniciarSesion');
+const botonCrear = document.getElementById("crear");
+
+const ojoS = document.querySelector("ojoS");
+const ojoCloseS = document.querySelector("ojoCloseS")
+const ojoR = document.querySelector("ojoR");
+const ojoCloseR = document.querySelector("ojoCloseR")
 
 
 function persona(){
@@ -97,13 +105,53 @@ function registrarse (){
             errorR.classList.remove("non");
         }
     })
-
-
 }
+
+function iniciar(){
+    mainRegistrar.classList.add("non");
+    mainSesion.classList.remove("non");
+}
+botonVolverIniciar.addEventListener('click', iniciar);
 
 
 function crearCuenta(){
     mainSesion.classList.add("non");
     mainRegistrar.classList.remove("non");
 }
-botonCrear.addEventListener('click', crearCuenta)
+botonCrear.addEventListener('click', crearCuenta);
+
+function contraseñaS(){
+    const input = contraseñaInputS;
+
+    if(input.type == 'password'){
+        input.type = 'text';
+        ojoS.classList.remove("non");
+        ojoCloseS.classList.add("non");
+
+    }
+    else{
+        input.type = 'password'
+        ojoS.classList.add("non");
+        ojoCloseS.classList.remove("non");
+    }
+}
+ojoS.addEventListener('click', contraseñaS);
+ojoCloseS.addEventListener('click', contraseñaS);
+
+function contraseñaR(){
+    const input = contraseñaInputR;
+
+    if(input.type == 'password'){
+        input.type = 'text';
+        ojoR.classList.remove("non");
+        ojoCloseR.classList.add("non");
+
+    }
+    else{
+        input.type = 'password'
+        ojoR.classList.add("non");
+        ojoCloseR.classList.remove("non");
+    }
+}
+ojoR.addEventListener('click', contraseñaR);
+ojoCloseR.addEventListener('click', contraseñaR);

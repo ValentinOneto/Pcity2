@@ -399,3 +399,27 @@ article{
     bottom: 105px;
     margin-left: 140px;
 }
+
+.ojoClose{
+    position: absolute;
+    bottom: 42%;
+    right: 7%;
+    border: none;
+    background-color: white;
+
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+.ojo{
+    position: absolute;
+    bottom: 42%;
+    right: 7%;
+    border: none;
+    background-color: white;
+
+    &:hover{
+        cursor: pointer;
+    }
+}

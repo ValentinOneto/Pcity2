@@ -13,6 +13,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
 
@@ -25,6 +26,10 @@
         <div class="texto" id="login">
             <input id="nombreS" type="text" placeholder="Nombre">
             <input id="contraS" type="password" placeholder="Contraseña">
+
+            <button id="ojoCloseS" class="ojoClose" ><span class="material-symbols-outlined">visibility_off</span></button>
+            <button id="ojoS" class="ojo non"><span class="material-symbols-outlined">visibility</span></button>
+
             <p class="non error" id="errorS">Usuario o contraseña incorrecta</p> 
         </div>
     
@@ -44,8 +49,12 @@
         </div>
         <button class="cruz" id="cruzRegistrar"><img  src="../../recursos/img/cruzBoton.png"></button>
         <div class="texto" id="login">
-            <input id="nombrR" type="text" placeholder="Nombre">
+            <input id="nombreR" type="text" placeholder="Nombre">
             <input id="contraR" type="password" placeholder="Contraseña">
+
+            <button id="ojoCloseR" class="ojoClose" ><span class="material-symbols-outlined">visibility_off</span></button>
+            <button id="ojoR" class="ojo non"><span class="material-symbols-outlined">visibility</span></button>
+
             <p class="non error" id="errorR">Error al crear cuenta</p> 
         </div>
     
@@ -53,7 +62,7 @@
             
         <div class="crearCuenta">
             <p class="cuenta">¿Ya tienes una cuenta?</p> 
-            <button id="crear" class="crear">Inicia sesión</button>
+            <button id="iniciarSesion" class="crear">Inicia sesión</button>
         </div>
     </main>
 
