@@ -4,11 +4,11 @@ import fs from "fs"
 
 function registrofun (Registro) {
   try {
-    let registro = fs.readFileSync("back/Login.json", "utf8")
+    let registro = fs.readFileSync("./Login.json", "utf8")
     registro = JSON.parse(registro);
     registro.push(Registro);
 
-    fs.writeFileSync('back/Login.json', JSON.stringify(Login, null, 2), 'utf-8')
+    fs.writeFileSync('./Login.json', JSON.stringify(Login, null, 2), 'utf-8')
 
     return {ok: true}
   }
@@ -18,33 +18,17 @@ function registrofun (Registro) {
 }
 };
 
-function sesionfun(dato) 
+function sesionfun(nombre, contraseña) 
 {
-    let dataCuentas = fs.readFileSync("back/Login.json", "utf-8")
+    let dataCuentas = fs.readFileSync("./Login.json", "utf-8")
         dataCuentas = JSON.parse(dataCuentas);
+        const credenciales = dataCuentas.some(user => user.nombre === nombre && user.contraseña === contraseña);
+        console.log(credenciales);
+        return credenciales;
 
-      dataCuentas.forEach(cuenta => {
-        if (dato.nombre === cuenta.nombre)
-        {
-          if (dato.contraseña === cuenta.contraseña)
-          {
-            return {nombre: true, contraseña: true}
-          }
-          else
-          {
-            return {nombre: true, contraseña: false}
-          }
-        }
-        else
-        {
-          return {nombre: false, contraseña: false}
-        }
-      })
-
-    console.log(data)
 }
 
-
+sesionfun("hola", "1234")
 onEvent("sesion", sesionfun);
 onEvent("registro", registrofun);
 startServer();
