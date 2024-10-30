@@ -228,6 +228,10 @@ article{
         border: none;
         font-size: 18px;
         border: solid 1px rgb(189, 189, 189);
+
+        &:focus{
+            outline: none;
+        }
     }
     
     .registrar {
@@ -328,6 +332,10 @@ article{
         border: none;
         font-size: 18px;
         border: solid 1px rgb(189, 189, 189);
+
+        &:focus{
+            outline: none;
+        }
     }
     
     .iniciar {
@@ -422,4 +430,9 @@ article{
     &:hover{
         cursor: pointer;
     }
+}
+
+.componenteFondo{
+    pointer-events: none;
+    opacity: 0.4;
 }

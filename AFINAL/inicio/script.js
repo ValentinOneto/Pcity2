@@ -38,7 +38,7 @@ const nombreInputR = document.getElementById('nombreR')
 const contraseñaInputS = document.getElementById("contraS");
 const contraseñaInputR = document.getElementById("contraR");
 
-
+const componentes = document.querySelectorAll(".comp");
 const personaBoton = document.getElementById("persona");
 const mainRegistrar = document.getElementById("mainRegistrar");
 const mainSesion = document.getElementById("mainSesion");
@@ -52,10 +52,10 @@ const errorR = document.getElementById('errorR');
 const botonVolverIniciar = document.getElementById('iniciarSesion');
 const botonCrear = document.getElementById("crear");
 
-const ojoS = document.querySelector("ojoS");
-const ojoCloseS = document.querySelector("ojoCloseS")
-const ojoR = document.querySelector("ojoR");
-const ojoCloseR = document.querySelector("ojoCloseR")
+const ojoS = document.getElementById("ojoS");
+const ojoCloseS = document.getElementById("ojoCloseS")
+const ojoR = document.getElementById("ojoR");
+const ojoCloseR = document.getElementById("ojoCloseR")
 
 
 function persona(){
