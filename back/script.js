@@ -28,7 +28,16 @@ function sesionfun(nombre, contraseña)
 
 }
 
-sesionfun("hola", "1234")
+
+
+function comparacionfun () {
+  
+}
+
+
+
+sesionfun("hola", "1234");
 onEvent("sesion", sesionfun);
 onEvent("registro", registrofun);
+onEvent("COmparacion", comparacionfun);
 startServer();
