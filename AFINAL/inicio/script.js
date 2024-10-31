@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function sugerencias(sugerencias) {
         sugerencias.forEach(componentes => {
             componentes.forEach(componente => {
-            options.push(componente.nombre)  ;  
+            options.push(componente.nombre);  
             })
         })
     }
@@ -165,3 +165,24 @@ function contraseñaR(){
 }
 ojoR.addEventListener('click', contraseñaR);
 ojoCloseR.addEventListener('click', contraseñaR);
+
+
+const comps = document.querySelector(".componentes");
+
+options.forEach(componente =>{
+    const tarjeta = document.createElement('button');
+    tarjeta.classList.add("comp");
+
+    comps.appendChild(tarjeta);
+
+    const nombre = document.createElement('h2');
+    nombre.textContent = componente.nombre;
+
+    tarjeta.appendChild(nombre);
+
+    const imagen = document.createElement('img');
+    imagen.src = componente.imagen;
+    imagen.classList.add('foto');
+
+    tarjeta.appendChild(imagen);
+})

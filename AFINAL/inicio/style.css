@@ -167,7 +167,7 @@ p{
     width: 80px;
 }
 
-article{
+.componentes{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
