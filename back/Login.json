@@ -1,7 +1,17 @@
 [
     {
     "nombre": "pepe",
-    "contraseña": "1234"
+    "contraseña": "1234",
+    "Pc 1": {
+      "nombre": "",
+      "procesador": "",
+      "mother": "",
+      "RAM": "",
+      "Tarjeta_Grafica": "",
+      "Disco SSD": "",
+      "Fuente": ""
+
+    }
   }
  
 ]
