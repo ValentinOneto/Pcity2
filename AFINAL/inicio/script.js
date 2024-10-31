@@ -1,7 +1,17 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const options = ["aiekas","skibidi", "toilet", "sigma","yakatai","aieka","alezito","ñomñom","mi pueblo no se toca"];
+    const options = [];
     const input1 = document.getElementById('input1');
     const busq1 = document.getElementById('busq1');
+
+    fetchData("busqueda", sugerencias)
+
+    function sugerencias(sugerencias) {
+        sugerencias.forEach(componentes => {
+            componentes.forEach(componente => {
+            options.push(componente.nombre)  ;  
+            })
+        })
+    }
 
     function setupAutocomplete(input, busq, options) {
         input.addEventListener('input', function() {
