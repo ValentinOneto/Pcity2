@@ -29,3 +29,19 @@ const options = ["aiekas","skibidi", "toilet", "sigma","yakatai","aieka","alezit
     }
 
     setupAutocomplete(input1, busq1, options);
+
+
+    let datos =[];
+    const tabla = document.querySelector("table");
+
+    informacion.forEach(info =>{
+        const fila = document.createElement('tr');
+        tabla.appendChild(fila);
+
+
+    })
+    
+    datas.forEach(data =>{
+        const celda = document.createElement('td');
+        
+    })
