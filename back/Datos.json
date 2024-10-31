@@ -2,6 +2,7 @@
     "procesadores AMD": [
       {
         "nombre": "Ryzen 5 5600G",
+        "imagen": "https://images.versus.io/objects/amd-ryzen-5-5600g.front.variety.1627676535298.jpg",
         "velocidad": "3.9 GHz",
         "cache": "384KB 3MB 16MB",
         "hilos": 12,
@@ -21,6 +22,7 @@
       },
       {
         "nombre": "Ryzen 7 5700X",
+        "imagen": "https://images.versus.io/objects/amd-ryzen-7-5700x.front.variety.1647854895792.jpg",
         "velocidad": "3.4 GHz",
         "cache": "512KB 4MB 32MB",
         "hilos": 16,
@@ -32,6 +34,7 @@
       },
       {
         "nombre": "Ryzen 5 4500",
+        "imagen": "https://images.versus.io/objects/amd-ryzen-5-4500.front.variety.1647865723225.jpg",
         "velocidad": "3.6 GHz",
         "cache": "384KB 3MB 32MB",
         "hilos": 12,
@@ -43,6 +46,7 @@
       },
       {
         "nombre": "Ryzen 5 3600",
+        "imagen": "https://images.versus.io/objects/amd-ryzen-5-3600.front.variety.1576684641045.jpg",
         "velocidad": "3.6 GHz",
         "cache": "384KB 3MB 8MB",
         "hilos": 12,
@@ -53,7 +57,8 @@
         "memoria_canales": 2  
       },
       {
-        "nombre": "Ryzen 3 8600G",
+        "nombre": "Ryzen 3 8300G",
+        "imagen": "https://images.versus.io/objects/amd-ryzen-3-8300g.front.variety.1704770791493.jpg",
         "velocidad": "3.4 GHz",
         "cache": "256KB 4MB 8MB",
         "hilos": 8,
@@ -76,6 +81,7 @@
     "procesadores Intel": [
         {
         "nombre": "Intel Core I5-10400",
+        "imagen": "https://images.versus.io/objects/intel-core-i5-10400.front.variety.1588621372275.jpg",
         "velocidad": "3.9 GHz",
         "cache": "384KB 1,5MB 12MB",
         "hilos": 12,
@@ -96,6 +102,7 @@
 
         {
           "nombre": "Intel Core i3-14100",
+          "imagen": "https://images.versus.io/objects/intel-core-i3-14100.front.variety.1704934063131.jpg",
           "velocidad": "3.5 GHz",
           "cache": "320KB 5MB 12MB",
           "hilos": 8,
@@ -116,6 +123,7 @@
 
       {
         "nombre": "Intel Core i5-12400",
+        "imagen": "https://images.versus.io/objects/intel-core-i5-12400.front.variety.1642534862512.jpg",
         "velocidad": "2.5 GHz",
         "cache": "480KB 7,5MB 18MB",
         "hilos":12,
@@ -136,6 +144,7 @@
 
        {
         "nombre": "Intel Core i7-13700k",
+        "imagen": "https://images.versus.io/objects/intel-core-i7-13700k.front.variety.1664372627709.jpg",
         "velocidad": "8 x 3.4 GHz / 8 x 2.5 GHz",
         "cache": " deesconocido 24MB 30MB",
         "hilos": 24,
@@ -156,6 +165,7 @@
 
        {
         "nombre": "Intel Core i5-12600k",
+        "imagen": "https://images.versus.io/objects/intel-core-i5-12600k.front.variety.1636453151841.jpg",
         "velocidad": "6 x 3.7 GHz / 4 x 2.8 GHz",
         "cache": " deesconocido 9.5MB 20MB",
         "hilos": 16,
@@ -180,6 +190,7 @@
     "motherboards": [
       {
         "nombre": "Gigabyte B450M DS3H",
+        "imagen": "https://images.versus.io/objects/gigabyte-b450m-ds3h.front.variety.1582994964259.jpg",
         "socket": "AM4",
         "wifi": "No tiene",
         "bluetooth": "No tiene",
@@ -207,6 +218,7 @@
 
       {
         "nombre": "MSI MAG B650 Tomahawk WiFi",
+        "imagen": "https://images.versus.io/objects/msi-mag-b650-tomahawk-wifi.front.variety.1664902771355.jpg",
         "socket": "AM5",
         "wifi": "no tiene",
         "bluetooth": "no tiene",
@@ -233,10 +245,11 @@
       },
 
       {
-        "nombre": "Asus Prime B569m-A",
+        "nombre": "Asus Prime B560M-A",
+        "imagen": "https://images.versus.io/objects/asus-prime-b560m-a.front.variety.1638472105899.jpg",
         "socket": "LGA 1200",
-        "wifi": "tiene",
-        "bluetooth": "tiene",
+        "wifi": "no tiene",
+        "bluetooth": "no tiene",
         "canales_memoria": 2,
         "RAM_max": "128 GB",
         "ranuras_RAM": 4,
