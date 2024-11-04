@@ -28,7 +28,9 @@ function sesionfun(nombre, contraseña)
 
 }
 
-
+onEvent('infoComps', (componentes) => {
+  return componentes;
+});
 
 function comparacionfun () {
   

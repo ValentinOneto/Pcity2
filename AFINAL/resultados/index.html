@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Resultados</title>
     <link rel="stylesheet" href="style.css">
     <script type="module" src="script.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.4/socket.io.js"></script>
-    <script type="module" src="../../socket.js"></script>
+    <script src="../../socket.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
@@ -39,32 +39,15 @@
     <h3 class="titulo">Tus resultados ya están listos</h3>
 
    <table>
-    <tr>
-        <th>
-            <div class="componente">
-                <h3 class="nombre">Nombre</h3>
-                <img class="foto" src="../../recursos/img/grafica.png">
-            </div>
-        </th>
 
-        <th>
-            <div class="componente">
-                <h3 class="nombre">Nombre</h3>
-                <img class="foto" src="../../recursos/img/grafica.png">
-            </div>
-        </th>
-    </tr>
-
-    <tr class="subtitulo">
-        <td>
-            <p>Resultados</p>
-        </td>
-
-        <td>
-            <p>Resultados</p>
-        </td>
-    </tr>
-
+    <thead>
+        <tr>
+            <th class="nombre1">111</th>
+            <th class="nombre2">222</th>
+        </tr>
+    </thead>
+    <tbody id="infoComps"></tbody>
    </table>
+
 </body>
 </html>

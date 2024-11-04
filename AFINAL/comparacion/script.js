@@ -1,0 +1,3 @@
+postData('componentes', componentesSeleccionados, (todosLosComponentes) => {
+});
+
