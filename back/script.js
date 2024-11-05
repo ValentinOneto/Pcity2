@@ -28,13 +28,11 @@ function sesionfun(nombre, contraseña)
 
 }
 
-onEvent('infoComps', (componentes) => {
+onEvent('componentes', () => {
+  let componentes = fs.readFileSync('datos.json', 'utf-8');
+  componentes = JSON.parse(componentes);
   return componentes;
-});
-
-function comparacionfun () {
-  
-}
+})
 
 
 

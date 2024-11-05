@@ -1,0 +1,8 @@
+body{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+select{
+    width: 300px;
+}
