@@ -71,7 +71,13 @@ fetchData('componentesComparar', (componentes) => {
 
 const tabla = document.getElementById('tabla');
 function tablaCompletar() {
-        let filaImagenes = document.createElement('tr');
+    let nombre1 = document.getElementById('nombre1');
+    let nombre2 = document.getElementById('nombre2');
+
+    nombre1.textContent = componentesRecibidos[0].nombre;
+    nombre2.textContent = componentesRecibidos[1].nombre;
+
+    let filaImagenes = document.createElement('tr');
 
         let celdaImagen1 = document.createElement('td');
         let img1 = document.createElement('img');
