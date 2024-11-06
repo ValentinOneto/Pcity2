@@ -274,6 +274,7 @@
 
       {
         "nombre": "MSI MPG B550 Gaming Plus",
+        "imagen": "https://images.versus.io/objects/msi-mpg-b550-gaming-plus.front.variety.1592350780833.jpg",
         "socket": "AM4",
         "wifi": "no tiene",
         "bluetooth": "no tiene",
@@ -301,6 +302,7 @@
 
       {
         "nombre": "MSI MAG Z790 Tomahawk WiFi",
+        "imagen": "https://images.versus.io/objects/msi-mag-z790-tomahawk-wifi.front.variety.1664477152636.jpg",
         "socket": "LGA 1700",
         "wifi": "tiene",
         "bluetooth": "tiene",
@@ -330,6 +332,7 @@
     "ram": [
       {
         "nombre": "Corsair Vengeance DDR4-3200 (2x8GB)",
+        "imagen": "https://images.versus.io/objects/corsair-vengeance-ddr4-3200-16gb-2x8gb.front.variety.1684098564605.jpg",
         "memoria": "2x8GB",
         "velocidad_spd": "2133 MHz",
         "velocidad_probada": "3200 MHz",
@@ -341,6 +344,7 @@
 
       {
         "nombre": "Corsair Vengeance RGB DDR5-6000 C30 32GB (2x16GB)",
+        "imagen": "https://images.versus.io/objects/corsair-vengeance-rgb-ddr5-6000-c30-32gb-2x16gb.front.variety.1670710038854.jpg",
         "memoria": "2x16GB",
         "velocidad_spd": "4800 MHz",
         "velocidad_probada": "6000 MHz",
@@ -352,6 +356,7 @@
 
       {
         "nombre": "Kingston Fury Beast DDR5-6000 CL38 8GB (1x8GB)",
+        "imagen": "https://images.versus.io/objects/kingston-fury-beast-ddr5-6000-cl38-8gb-1x8gb.front.variety.1672592211717.jpg",
         "memoria": "8GB",
         "velocidad_spd": "3000 MHz",
         "velocidad_probada": "6000 MHz",
@@ -363,6 +368,7 @@
 
       {
         "nombre": "Corsair Vengeance DDR5-5600 C32 32GB (2x16GB)",
+        "imagen": "https://images.versus.io/objects/corsair-vengeance-ddr5-5600-c32-32gb-2x16gb.front.variety.1670773546297.jpg",
         "memoria": "2x16GB",
         "velocidad_spd": "4800 MHz",
         "velocidad_probada": "5600 MHz",
@@ -374,6 +380,7 @@
 
       {
         "nombre": "Adata XPG Gammix D30 DDR4-3200 CL16 16GB (2x8GB)",
+        "imagen": "https://images.versus.io/objects/adata-xpg-gammix-d30-ddr4-3200-cl16-16gb-2x8gb.front.variety.1679208880534.jpg",
         "memoria": "2x8GB",
         "velocidad_spd": "2666 MHz",
         "velocidad_probada": "3200 MHz",
@@ -387,6 +394,7 @@
     "gpus": [
       {
         "nombre": "Nvidia GeForce RTX 3060",
+        "imagen": "https://images.versus.io/objects/nvidia-geforce-rtx-3060.front.variety.1610630274718.jpg",
         "velocidad_reloj": "1320 MHz",
         "indice_pixeles": "113.7 GPixels/s",
         "rendimiento_coma_flotante": "12.74 TFLOPS",
@@ -407,6 +415,7 @@
 
       {
         "nombre": "Nvidia GeForce RTX 4060",
+        "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlf2CkZfZn7pPt0sKutpO_uPRu36OPo-S2Ew&s",
         "velocidad_reloj": "1830 MHz",
         "indice_pixeles": "78.72 GPixels/s",
         "rendimiento_coma_flotante": "15.11 TFLOPS",
@@ -427,6 +436,7 @@
 
       {
         "nombre": "AMD Radeon RX 580",
+        "imagen": "https://images.versus.io/objects/amd-radeon-rx-580.front.variety.1576684641045.jpg",
         "velocidad_reloj": "1120 MHz",
         "indice_pixeles": "42.9 GPixels/s",
         "rendimiento_coma_flotante": "6.1 TFLOPS",
@@ -447,6 +457,7 @@
       
       {
         "nombre": "Nvidia GeForce GTX 1650",
+        "imagen": "https://images.pc-builds.com/images/components/9ccaebd5c398391d6f5fc5bcfb273ff2/3f993875bef4cd2490f342ca9aac2ec3/db4a3516a670071f2fa6fcab81c01996.png",
         "velocidad_reloj": "1485 MHz",
         "indice_pixeles": "53.28 GPixels/s",
         "rendimiento_coma_flotante": "2.98 TFLOPS",
@@ -467,6 +478,7 @@
 
       {
         "nombre": "AMD Radeon RX 6650 XT",
+        "imagen": "https://images.versus.io/objects/amd-radeon-rx-6650-xt.front.variety.1652380677356.jpg",
         "velocidad_reloj": "2055 MHz",
         "indice_pixeles": "168.6 GPixels/s",
         "rendimiento_coma_flotante": "10.79 TFLOPS",
@@ -489,6 +501,7 @@
     "disco": [
       {
         "nombre": "Samsung 980 Pro 1TB",
+        "imagen": "https://images.versus.io/objects/samsung-990-pro-1tb.front.variety.1669636838690.jpg",
         "capacidad": "1 TB",
         "velocidad_lectura_aleatoria": "1000000 IOPS",
         "velocidad_lectura_secuencial": "7000 MB/s",
@@ -499,6 +512,7 @@
 
       {
         "nombre": "Kingston A400 480GB",
+        "imagen": "https://images.versus.io/objects/kingston-a400-480gb.front.variety.1576684641045.jpg",
         "capacidad": "480 GB",
         "velocidad_lectura_aleatoria": "95000 IOPS",
         "velocidad_lectura_secuencial": "500 MB/s",
@@ -509,6 +523,7 @@
 
       {
         "nombre": "Adata Ultimate SU650 240GB",
+        "imagen": "https://images.versus.io/objects/adata-ultimate-su650-240gb.front.variety.1613979063480.jpg",
         "capacidad": "240 GB",
         "velocidad_lectura_aleatoria": "40000 IOPS",
         "velocidad_lectura_secuencial": "520 MB/s",
@@ -519,6 +534,7 @@
 
       {
         "nombre": "Kingston KC3000 1024GB",
+        "imagen": "https://images.versus.io/objects/kingston-kc3000-1024gb.front.variety.1636729955897.jpg",
         "capacidad": "1 TB",
         "velocidad_lectura_aleatoria": "900000 IOPS",
         "velocidad_lectura_secuencial": "7000 MB/s",
@@ -529,6 +545,7 @@
 
       {
         "nombre": "Adata Ultimate SU650 512GB",
+        "imagen": "https://images.versus.io/objects/adata-ultimate-su650-512gb.front.variety.1614002833127.jpg",
         "capacidad": "512 GB",
         "velocidad_lectura_aleatoria": "40000 IOPS",
         "velocidad_lectura_secuencial": "520 MB/s",
