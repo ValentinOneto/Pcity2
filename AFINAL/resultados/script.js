@@ -65,8 +65,32 @@ let componentesRecibidos = [
   }
 ]
 
+fetchData('componentesComparar', (componentes) => {
+
+});
 
 const tabla = document.getElementById('tabla');
 function tablaCompletar() {
-    componentesRecibidos.forEach() 
-}
+    console.log(componentesRecibidos);
+    componentesRecibidos.forEach(()=>{
+        const nombre1 = document.getElementById('nombre1');
+        const nombre2 = document.getElementById('nombre2');
+
+        let filaImagenes = document.createElement('tr');
+
+        let celdaImagen1 = document.createElement('td');
+        let img1 = document.createElement('img');
+        img1.src = componentesRecibidos[0].imagen;
+        celdaImagen1.appendChild(img1);
+        filaImagenes.appendChild(celdaImagen1);
+
+        let celdaImagen2 = document.createElement('td');
+        let img2 = document.createElement('img');
+        img1.src = componentesRecibidos[1].imagen;
+        celdaImagen2.appendChild(img2);
+        filaImagenes.appendChild(celdaImagen2);
+        
+    })
+};
+
+tablaCompletar();
