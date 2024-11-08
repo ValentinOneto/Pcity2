@@ -11,7 +11,7 @@
         "ram_velocidad": "3200 MHz",
         "max_ram": "64 GB",
         "memoria_canales": 2,
-        "GPU":1,
+        "gpu":1,
         "velocidad_GPU": "1900 MHz",
         "unidades_ejecucion": 7,
         "pantallas_compatibles": 3,
@@ -30,7 +30,7 @@
         "ram_velocidad": "3200 MHz",
         "max_ram": "128 GB",
         "memoria_canales": 2,
-        "GPU":1
+        "gpu":1
       },
       {
         "nombre": "Ryzen 5 4500",
@@ -43,7 +43,7 @@
         "ram_velocidad": "3200 MHz",
         "max_ram": "128 GB",
         "memoria_canales": 2,
-        "GPU":1
+        "gpu":"0"
       },
       {
         "nombre": "Ryzen 5 3600",
@@ -56,7 +56,7 @@
         "ram_velocidad": "3200 MHz",
         "max_ram": "128 GB",
         "memoria_canales": 2,
-        "GPU":1
+        "gpu":"0"
       },
       {
         "nombre": "Ryzen 3 8300G",
@@ -69,7 +69,7 @@
         "ram_velocidad": "5200 MHz",
         "max_ram": "256 GB",
         "memoria_canales": 2,
-        "GPU":1,
+        "gpu":1,
         "velocidad_GPU": "800 MHz",
         "unidades_ejecucion": 8,
         "pantallas_compatibles": 4,
@@ -91,7 +91,7 @@
         "ram_velocidad": "2666 MHz",
         "max_ram": "128 GB",
         "memoria_canales": 2,
-        "GPU":1, 
+        "gpu":1, 
         "velocidad_GPU": "350 MHz",
         "unidades_ejecucion": 24,
         "pantallas_compatibles": 3,
@@ -111,7 +111,7 @@
           "ram_velocidad": "4800 MHz",
           "max_ram": "128 GB",
           "memoria_canales": 2,
-          "GPU":1,
+          "gpu":1,
           "velocidad_GPU": "300 MHz",
           "unidades_ejecucion": 32,
           "pantallas_compatibles": 4,
@@ -125,14 +125,14 @@
         "nombre": "Intel Core i5-12400",
         "imagen": "https://images.versus.io/objects/intel-core-i5-12400.front.variety.1642534862512.jpg",
         "velocidad": "2.5 GHz",
-        "cache": "480KB 7,5MB 18MB",
+        "cache": "480KB 7.5MB 18MB",
         "hilos":12,
         "nucleos": 6,
         "transistores": "10 nm",
         "ram_velocidad": "4800 MHz",
         "max_ram": "128 GB",
         "memoria_canales": 2,
-        "GPU":1,
+        "gpu":1,
         "velocidad_GPU": "300 MHz",
         "unidades_ejecucion": 24,
         "pantallas_compatibles": 4,
@@ -152,7 +152,7 @@
         "ram_velocidad": "5600 MHz",
         "max_ram": "128 GB",
         "memoria_canales": 2,
-        "GPU": 1,
+        "gpu": 1,
         "velocidad_GPU": "300 MHz",
         "unidades_ejecucion": 32,
         "pantallas_compatibles": 4,
@@ -172,7 +172,7 @@
         "ram_velocidad": "4800 MHz",
         "max_ram": "128 GB",
         "memoria_canales": 2,
-        "GPU":1,
+        "gpu":1,
         "velocidad_GPU": "300 MHz",
         "unidades_ejecucion": 32,
         "pantallas_compatibles": 4,
@@ -192,22 +192,22 @@
         "wifi": "No tiene",
         "bluetooth": "No tiene",
         "canales_memoria": 2,
-        "RAM_max": "64 GB",
-        "ranuras_RAM": 4,
-        "velocidad_RAM_max": "2933 GHz",
+        "ram_max": "64 GB",
+        "ranuras_ram": 4,
+        "velocidad_ram_max": "2933 GHz",
         "puertos":8 ,
         "usb_a_gen1": 4,
-        "usb_a_gen2": 0,
-        "usb_c_gen1": 0,
-        "usb_c_gen2": 0,
+        "usb_a_gen2": "0",
+        "usb_c_gen1": "0",
+        "usb_c_gen2": "0",
         "usb_2_0": 4,
-        "usb_2x2": 0,
-        "SSD_RANURAS":1,
-        "sata_2": 0,
-        "sata_3": 0,
-        "msata": 0,
+        "usb_2x2": "0",
+        "ssd_ranuras":1,
+        "sata_2": "0",
+        "sata_3": "0",
+        "msata": "0",
         "m2": 1,
-        "u2": 0,
+        "u2": "0",
         "relación_señal_ruido": "97 dB"
       },
 
@@ -218,22 +218,22 @@
         "wifi": "no tiene",
         "bluetooth": "no tiene",
         "canales_memoria": 2,
-        "RAM_max": "128 GB",
-        "ranuras_RAM": 4,
-        "velocidad_RAM_max": "4800 GHz",
+        "ram_max": "128 GB",
+        "ranuras_ram": 4,
+        "velocidad_ram_max": "4800 GHz",
         "puertos": 9,
         "usb_a_gen1": 4,
         "usb_a_gen2": 3,
-        "usb_c_gen1": 0,
-        "usb_c_gen2": 0,
+        "usb_c_gen1": "0",
+        "usb_c_gen2": "0",
         "usb_2_0": 2,
         "usb_2x2": 1,
-        "SSD_RANURAS":9, 
-        "sata_2": 0,
+        "ssd_ranuras": 9, 
+        "sata_2": "0",
         "sata_3": 6,
-        "msata": 0,
+        "msata": "0",
         "m2": 3,
-        "u2": 0,
+        "u2": "0",
         "relación_señal_ruido": "120 dB"
       },
 
@@ -244,24 +244,22 @@
         "wifi": "no tiene",
         "bluetooth": "no tiene",
         "canales_memoria": 2,
-        "RAM_max": "128 GB",
-        "ranuras_RAM": 4,
-        "velocidad_RAM_max": "3200 GHz",
+        "ram_max": "128 GB",
+        "ranuras_ram": 4,
+        "velocidad_ram_max": "3200 GHz",
         "puertos": 6,
-          "usb_a_gen1": 0,
-          "usb_a_gen2": 1,
-          "usb_c_gen1": 0,
-          "usb_c_gen2": 1,
-          "usb_2_0": 4,
-          "usb_2x2": 0,
-        
-        "SSD_RANURAS": 8,
-          "sata_2": 0,
-          "sata_3": 6,
-          "msata": 0,
-          "m2": 2,
-          "u2": 0,
-        
+        "usb_a_gen1": "0",
+        "usb_a_gen2": 1,
+        "usb_c_gen1": "0",
+        "usb_c_gen2": 1,
+        "usb_2_0": 4,
+        "usb_2x2": "0",
+        "ssd_ranuras": 8,
+        "sata_2": "0",
+        "sata_3": 6,
+        "msata": "0",
+        "m2": 2,
+        "u2": "0",
         "relación_señal_ruido": "desconocido"
       },
 
@@ -272,24 +270,22 @@
         "wifi": "no tiene",
         "bluetooth": "no tiene",
         "canales_memoria": 2,
-        "RAM_max": "128 GB",
-        "ranuras_RAM": 4,
-        "velocidad_RAM_max": "3200 GHz",
-        "PUERTOS": 8,
+        "ram_max": "128 GB",
+        "ranuras_ram": 4,
+        "velocidad_ram_max": "3200 GHz",
+        "puertos": 8,
           "usb_a_gen1": 2,
           "usb_a_gen2": 1,
-          "usb_c_gen1": 0,
+          "usb_c_gen1": "0",
           "usb_c_gen2": 1,
           "usb_2_0": 4,
-          "usb_2x2": 0,
-
-        "SSD_RANURAS":8, 
-          "sata_2": 0,
+          "usb_2x2": "0",
+        "ssd_ranuras":8, 
+          "sata_2": "0",
           "sata_3": 6,
-          "msata": 0,
+          "msata": "0",
           "m2": 2,
-          "u2": 0,
-
+          "u2": "0",
         "relación_señal_ruido": "95 dB"
       },
 
@@ -300,23 +296,22 @@
         "wifi": "tiene",
         "bluetooth": "tiene",
         "canales_memoria": 2,
-        "RAM_max": "256 GB",
-        "ranuras_RAM": 4,
-        "velocidad_RAM_max": "5600 GHz",
-        "PUERTOS": 9,
+        "ram_max": "256 GB",
+        "ranuras_ram": 4,
+        "velocidad_ram_max": "5600 GHz",
+        "puertos": 9,
           "usb_a_gen1": 4,
           "usb_a_gen2": 4,
-          "usb_c_gen1": 0,
+          "usb_c_gen1": "0",
           "usb_c_gen2": 1,
-          "usb_2_0": 0,
-          "usb_2x2": 0,
-  
-        "SSD_RANURAS":11, 
-          "sata_2": 0,
+          "usb_2_0": "0",
+          "usb_2x2": "0",
+        "ssd_ranuras":11, 
+          "sata_2": "0",
           "sata_3": 7,
-          "msata": 0,
+          "msata": "0",
           "m2": 4,
-          "u2": 0,
+          "u2": "0",
   
         "relación_señal_ruido": "120 dB"
       }
@@ -331,7 +326,7 @@
         "velocidad_probada": "3200 MHz",
         "latencia": "13.75 ns",
         "latencia_cas": 22,
-        "Temporización_TRAS_TRCD_TRP": "53;22;22",
+        "temporización_tras_trcd_trp": "53;22;22",
         "voltaje": "1.2 V"
       },
 
@@ -343,7 +338,7 @@
         "velocidad_probada": "6000 MHz",
         "latencia": "10 ns",
         "latencia_cas": 30,
-        "Temporización_TRAS_TRCD_TRP": "76;36;36",
+        "temporización_tras_trcd_trp": "76;36;36",
         "voltaje": "1.4 V"
       },
 
@@ -355,7 +350,7 @@
         "velocidad_probada": "6000 MHz",
         "latencia": "10.67 ns",
         "latencia_cas": 33,
-        "Temporización_TRAS_TRCD_TRP": "80;38;38",
+        "temporización_tras_trcd_trp": "80;38;38",
         "voltaje": "1.35 V"
       },
 
@@ -367,7 +362,7 @@
         "velocidad_probada": "5600 MHz",
         "latencia": "11.43 ns",
         "latencia_cas": 32,
-        "Temporización_TRAS_TRCD_TRP": "76;36;36",
+        "temporización_tras_trcd_trp": "76;36;36",
         "voltaje": "1.35 V"
       },
 
@@ -379,7 +374,7 @@
         "velocidad_probada": "3200 MHz",
         "latencia": "10 ns",
         "latencia_cas": 16,
-        "Temporización_TRAS_TRCD_TRP": "19;19;19",
+        "temporización_tras_trcd_trp": "19;19;19",
         "voltaje": "1.35 V"
       }
     ],
@@ -396,12 +391,12 @@
         "unidades_tonalidad": 3584,
         "unidades_textura": 112,
         "unidades_generacion_salida": 64,
-        "memoria": {
+        "memoria": 1,
           "velocidad_efectiva": "15000 MHz",
           "ancho_banda_max": "360 GB/s",
           "vram": "12 GB",
-          "bus_width": "192 bits"
-        },
+          "bus_width": "192 bits",
+  
         "pantallas_compatibles": 4,
         "lithography": "8 nm"
       },
@@ -417,12 +412,12 @@
         "unidades_tonalidad": 3072,
         "unidades_textura": 96,
         "unidades_generacion_salida": 32,
-        "memoria": {
+        "memoria": 1,
           "velocidad_efectiva": "17000 MHz",
           "ancho_banda_max": "272 GB/s",
           "vram": "8 GB",
-          "bus_width": "128 bits"
-        },
+          "bus_width": "128 bits",
+        
         "pantallas_compatibles": 4,
         "lithography": "8 nm"
       },
@@ -438,12 +433,12 @@
         "unidades_tonalidad": 2304,
         "unidades_textura": 144,
         "unidades_generacion_salida": 32,
-        "memoria": {
+        "memoria": 1,
           "velocidad_efectiva": "8000 MHz",
           "ancho_banda_max": "224 GB/s",
           "vram": "8.1 GB",
-          "bus_width": "256 bits"
-        },
+          "bus_width": "256 bits",
+       
         "pantallas_compatibles": "desconocido",
         "lithography": "14 nm"
       },
@@ -459,12 +454,12 @@
         "unidades_tonalidad": 896,
         "unidades_textura": 56,
         "unidades_generacion_salida": 32,
-        "memoria": {
+        "memoria": 1,
           "velocidad_efectiva": "8000 MHz",
           "ancho_banda_max": "128 GB/s",
           "vram": "4 GB",
-          "bus_width": "128 bits"
-        },
+          "bus_width": "128 bits",
+        
         "pantallas_compatibles": "3",
         "lithography": "12 nm"
       },
@@ -480,12 +475,13 @@
         "unidades_tonalidad": 2049,
         "unidades_textura": 198,
         "unidades_generacion_salida": 64,
-        "memoria": {
+
+        "memoria": 1,
           "velocidad_efectiva": "17500 MHz",
           "ancho_banda_max": "280 GB/s",
           "vram": "8 GB",
-          "bus_width": "1128 bits"
-        },
+          "bus_width": "1128 bits",
+       
         "pantallas_compatibles": "4",
         "lithography": "7 nm"
       }
