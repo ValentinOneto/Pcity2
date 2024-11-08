@@ -34,7 +34,8 @@ onEvent('componentes', () => {
   return componentes;
 })
 
-
+onEvent('componentesComparar', () =>{ th4v64bgv64u
+})
 
 sesionfun("hola", "1234");
 onEvent("sesion", sesionfun);

@@ -85,6 +85,9 @@ componentesRecibidos.forEach(componente => {
     });
 });
 
+fetchData('componentes', (componentes) =>{
+    console.log(componentes)
+})
 
 tabla += "<tr>";
 componentesRecibidos.forEach(componente => {
