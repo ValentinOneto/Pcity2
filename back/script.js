@@ -31,9 +31,7 @@ function sesionfun(nombre, contraseña)
 onEvent('componentes', () => {
   let componentesTodo = fs.readFileSync('datos.json', 'utf-8');
   componentesTodo = JSON.parse(componentesTodo);
-  const componentesNombre = Object.values(componentesTodo).flat().map(item => item.nombre);
-
-  return componentesNombre;
+  return componentesTodo;
 })
 
 sesionfun("hola", "1234");

@@ -1,61 +1,47 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const options = [];
+    let opciones = [];
     const input1 = document.getElementById('input1');
     const busq1 = document.getElementById('busq1');
-
-    fetchData("busqueda", sugerencias)
-
-    function sugerencias(sugerencias) {
-        sugerencias.forEach(componentes => {
-            componentes.forEach(componente => {
-            options.push(componente.nombre);  
-            })
-        })
-    }
-
-    function setupAutocomplete(input, busq, options) {
-        input.addEventListener('input', function() {
+    
+    
+    fetchData('componentes', (componentes) => {
+        const nombreComponentes = Object.values(componentes).flat().map(item => item.nombre);
+        console.log(nombreComponentes);
+        opciones.push(nombreComponentes);
+        setupAutocomplete(input1, busq1, opciones)
+    })
+    
+    console.log(opciones)
+    
+    function setupAutocomplete(input, busq, opciones) {
+        input.addEventListener('input', function () {
             const inputValue = input.value.toLowerCase();
             busq.innerHTML = '';
-
-            const opcionFilt = options.filter(opcion =>
+    
+            const opcionFilt = opciones.filter(opcion =>
                 opcion.toLowerCase().startsWith(inputValue)
             );
-
+    
             opcionFilt.forEach(opcion => {
                 const suggestionItem = document.createElement('div');
                 suggestionItem.textContent = opcion;
                 busq.appendChild(suggestionItem);
-
-                suggestionItem.addEventListener('click', function() {
+    
+                suggestionItem.addEventListener('click', function () {
                     input.value = opcion;
                     busq.innerHTML = '';
                 });
             });
-
+    
             if (inputValue === '' || opcionFilt.length === 0) {
                 busq.innerHTML = '';
             }
         });
     }
+    
+    setupAutocomplete(input1, busq1, opciones);
+})
 
-    setupAutocomplete(input1, busq1, options);
-});
-
-
-const nombreInputS = document.getElementById("nombreS");
-const nombreInputR = document.getElementById('nombreR')
-const contraseñaInputS = document.getElementById("contraS");
-const contraseñaInputR = document.getElementById("contraR");
-
-const componentes = document.querySelectorAll(".comp");
-const personaBoton = document.getElementById("persona");
-const mainRegistrar = document.getElementById("mainRegistrar");
-const mainSesion = document.getElementById("mainSesion");
-const fondo = document.querySelector(".inicio");
-const botonRegistrar = document.getElementById("regist");
-const cruzSesion = document.getElementById('cruzSesion');
-const cruzRegistrar = document.getElementById('cruzRegistrar');
 const iniciarBoton = document.getElementById('iniciar');
 const errorS = document.getElementById('errorS');
 const errorR = document.getElementById('errorR');
@@ -165,24 +151,3 @@ function contraseñaR(){
 }
 ojoR.addEventListener('click', contraseñaR);
 ojoCloseR.addEventListener('click', contraseñaR);
-
-
-const comps = document.querySelector(".componentes");
-
-options.forEach(componente =>{
-    const tarjeta = document.createElement('button');
-    tarjeta.classList.add("comp");
-
-    comps.appendChild(tarjeta);
-
-    const nombre = document.createElement('h2');
-    nombre.textContent = componente.nombre;
-
-    tarjeta.appendChild(nombre);
-
-    const imagen = document.createElement('img');
-    imagen.src = componente.imagen;
-    imagen.classList.add('foto');
-
-    tarjeta.appendChild(imagen);
-})

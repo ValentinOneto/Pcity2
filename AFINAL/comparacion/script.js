@@ -5,14 +5,15 @@ fetchData('componentes', (componentes) => {
     const select2 = document.getElementById('select2');
 
     function componentesFuncion(categoria, componentesCategoria) {
-        console.log(categoria, componentesCategoria);
-        
+           
         componentes.forEach(componente => {
             const option1 = document.createElement('option');
             option1.textContent = `${componente.charAt(0).toUpperCase()+ componente.slice(1).toLowerCase()} - ${categoria}`;
+            option1.value = componente.nombre;
 
             const option2 = document.createElement('option');
             option2.textContent = `${componente.charAt(0).toUpperCase()+ componente.slice(1).toLowerCase()} - ${categoria}`;
+            option2.value = componente.nombre;
 
             select1.appendChild(option1);
             select2.appendChild(option2);
@@ -26,12 +27,9 @@ fetchData('componentes', (componentes) => {
         option1.textContent = `${categoria.charAt(0).toUpperCase()+ categoria.slice(1).toLowerCase()} - ${categoria.nombre}`;
        
 
-            const option2 = document.createElement('option');
-            option2.value = categoria.nombre;
-            option2.textContent = `${categoria.charAt(0).toUpperCase()+ categoria.slice(1).toLowerCase()} - ${categoria.nombre}`;
-
-
-    
+        const option2 = document.createElement('option');
+        option2.value = categoria.nombre;
+        option2.textContent = `${categoria.charAt(0).toUpperCase()+ categoria.slice(1).toLowerCase()} - ${categoria.nombre}`;
 
     }
     componentesFuncion();
