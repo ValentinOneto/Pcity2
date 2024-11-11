@@ -1,36 +1,44 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const options = ["aiekas","skibidi", "toilet", "sigma","yakatai","aieka","alezito","ñomñom","mi pueblo no se toca"];
-    const input1 = document.getElementById('input1');
-    const busq1 = document.getElementById('busq1');
+let opciones = [];
+const input1 = document.getElementById('input1');
+const busq1 = document.getElementById('busq1');
 
-    function setupAutocomplete(input, busq, options) {
-        input.addEventListener('input', function() {
-            const inputValue = input.value.toLowerCase();
-            busq.innerHTML = '';
 
-            const opcionFilt = options.filter(opcion =>
-                opcion.toLowerCase().startsWith(inputValue)
-            );
+fetchData('componentes', (componentes) => {
+    const nombreComponentes = Object.values(componentes).flat().map(item => item.nombre);
+    opciones.push(...nombreComponentes);
+    setupAutocomplete(input1, busq1, opciones)
+})
 
-            opcionFilt.forEach(opcion => {
-                const suggestionItem = document.createElement('div');
-                suggestionItem.textContent = opcion;
-                busq.appendChild(suggestionItem);
+console.log(opciones)
 
-                suggestionItem.addEventListener('click', function() {
-                    input.value = opcion;
-                    busq.innerHTML = '';
-                });
-            });
+function setupAutocomplete(input, busq, opciones) {
+    input.addEventListener('input', function () {
+        const inputValue = input.value.toLowerCase();
+        busq.innerHTML = '';
 
-            if (inputValue === '' || opcionFilt.length === 0) {
+        const opcionFilt = opciones.filter(opcion =>
+            opcion.toLowerCase().startsWith(inputValue)
+        );
+
+        opcionFilt.forEach(opcion => {
+            const suggestionItem = document.createElement('div');
+            suggestionItem.textContent = opcion;
+            busq.appendChild(suggestionItem);
+
+            suggestionItem.addEventListener('click', function () {
+                input.value = opcion;
                 busq.innerHTML = '';
-            }
+            });
         });
-    }
 
-    setupAutocomplete(input1, busq1, options);
-    
+        if (inputValue === '' || opcionFilt.length === 0) {
+            busq.innerHTML = '';
+        }
+    });
+}
+
+setupAutocomplete(input1, busq1, opciones);
+
     let componentes = document.querySelectorAll(".comp");
     let titulo = document.getElementById("titu");
     let descripcion = document.getElementById("desc");
@@ -72,6 +80,4 @@ botones.forEach(boton => {
         botones.forEach(c => c.classList.remove("filtro"));
         boton.classList.add("filtro");
     });
-});
-
 });

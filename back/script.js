@@ -29,12 +29,11 @@ function sesionfun(nombre, contraseña)
 }
 
 onEvent('componentes', () => {
-  let componentes = fs.readFileSync('datos.json', 'utf-8');
-  componentes = JSON.parse(componentes);
-  return componentes;
-})
+  let componentesTodo = fs.readFileSync('datos.json', 'utf-8');
+  componentesTodo = JSON.parse(componentesTodo);
+  const componentesNombre = Object.values(componentesTodo).flat().map(item => item.nombre);
 
-onEvent('componentesComparar', () =>{ th4v64bgv64u
+  return componentesNombre;
 })
 
 sesionfun("hola", "1234");

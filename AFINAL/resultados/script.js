@@ -1,8 +1,16 @@
-const opciones = ["aiekas", "skibidi", "toilet", "sigma", "yakatai", "aieka", "alezito", "ñomñom", "mi pueblo no se toca"];
+let opciones = [];
 const input1 = document.getElementById('input1');
 const busq1 = document.getElementById('busq1');
 
-// Función de autocompletado
+
+fetchData('componentes', (componentes) => {
+    const nombreComponentes = Object.values(componentes).flat().map(item => item.nombre);
+    opciones.push(...nombreComponentes);
+    setupAutocomplete(input1, busq1, opciones)
+})
+
+console.log(opciones)
+
 function setupAutocomplete(input, busq, opciones) {
     input.addEventListener('input', function () {
         const inputValue = input.value.toLowerCase();
@@ -85,9 +93,6 @@ componentesRecibidos.forEach(componente => {
     });
 });
 
-fetchData('componentes', (componentes) =>{
-    console.log(componentes)
-})
 
 tabla += "<tr>";
 componentesRecibidos.forEach(componente => {
@@ -124,5 +129,3 @@ function textoBien(text) {
 
     return textBonito;
 }
-
-
