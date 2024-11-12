@@ -75,8 +75,11 @@ fetchData('graficas', (graficas) => {
 
 let componentes = document.querySelectorAll(".comp");
 let titulo = document.getElementById("titu");
-componentes.forEach(componente => {
-    componente.addEventListener("click", ()=> { 
+
+function inputs (){
+
+    componentes.forEach(componente => {
+        componente.addEventListener("click", ()=> { 
     
     componentes.forEach(c => c.classList.remove("filtro"));
     componente.classList.add("filtro")
@@ -84,27 +87,94 @@ componentes.forEach(componente => {
     let titulos = componente.nextSibling.textContent.trim();
     titulo.textContent = titulos;
 
-    if(titulo.textContent == Procesador){
-        procesadoresArray.forEach(procesador => {
+    if(titulo.textContent == "Procesador"){
+        procesadoresArray.forEach([option1, option2 => {
                 const option1 = document.createElement('option');
                 option1.textContent = `${componente.nombre}`;
                 option1.value = componente.nombre;
 
-                const option2 = document.createElement('option');
+                option2 = document.createElement('option');
                 option2.textContent = `${componente.nombre}`;
                 option2.value = componente.nombre;
 
                 select1.appendChild(option1);
                 select2.appendChild(option2);
 
-        for (let categoria in componentesTodo) {
-            componentesFuncion(categoria);
-        }
-        })
-    }
+        }])
+    } else if(titulo.textContent == "Fuente"){
+        procesadoresArray.forEach([option1, option2 => {
+                const option1 = document.createElement('option');
+                option1.textContent = `${componente.nombre}`;
+                option1.value = componente.nombre;
 
+                option2 = document.createElement('option');
+                option2.textContent = `${componente.nombre}`;
+                option2.value = componente.nombre;
+
+                select1.appendChild(option1);
+                select2.appendChild(option2);
+
+        }])
+    } else if (titulo.textContent == "Motherboard"){
+        procesadoresArray.forEach([option1, option2 => {
+                const option1 = document.createElement('option');
+                option1.textContent = `${componente.nombre}`;
+                option1.value = componente.nombre;
+
+                option2 = document.createElement('option');
+                option2.textContent = `${componente.nombre}`;
+                option2.value = componente.nombre;
+
+                select1.appendChild(option1);
+                select2.appendChild(option2);
+
+        }])
+    } else if(titulo.textContent == "Disco SSD"){
+        procesadoresArray.forEach([option1, option2 => {
+                const option1 = document.createElement('option');
+                option1.textContent = `${componente.nombre}`;
+                option1.value = componente.nombre;
+
+                option2 = document.createElement('option');
+                option2.textContent = `${componente.nombre}`;
+                option2.value = componente.nombre;
+
+                select1.appendChild(option1);
+                select2.appendChild(option2);
+        }])
+    } else if(titulo.textContent == "RAM"){
+        procesadoresArray.forEach([option1, option2 => {
+                const option1 = document.createElement('option');
+                option1.textContent = `${componente.nombre}`;
+                option1.value = componente.nombre;
+
+                option2 = document.createElement('option');
+                option2.textContent = `${componente.nombre}`;
+                option2.value = componente.nombre;
+
+                select1.appendChild(option1);
+                select2.appendChild(option2);
+
+        }])
+    } else if (titulo.textContent == "Gráfica"){
+        procesadoresArray.forEach([option1, option2 => {
+                const option1 = document.createElement('option');
+                option1.textContent = `${componente.nombre}`;
+                option1.value = componente.nombre;
+
+                option2 = document.createElement('option');
+                option2.textContent = `${componente.nombre}`;
+                option2.value = componente.nombre;
+                
+                select1.appendChild(option1);
+                select2.appendChild(option2);
+
+        }])
+    }
 });
-});
+})
+inputs();
+}
 
 let botones = document.querySelectorAll(".boton");
 botones.forEach(boton => {
@@ -115,7 +185,7 @@ boton.addEventListener("click", ()=> {
 });
 });
 
-document.getElementById("comparar").addEventListener("click", () => {
+document.getElementById("compararBoton").addEventListener("click", () => {
     postData('componentesComparar', [select1.value, select2.value], (response) => {
         if (response.ok) {
             window.location.href = "../resultados/index.html";
@@ -124,4 +194,3 @@ document.getElementById("comparar").addEventListener("click", () => {
         }
     });
 });
-
