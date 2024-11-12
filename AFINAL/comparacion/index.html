@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Resultados</title>
+        <title>Comparacion</title>
         <link rel="stylesheet" href="style.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.4/socket.io.js"></script>
         <script src="../../socket.js"></script>
@@ -14,14 +14,46 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     </head>
 <body>
-    <select name="" class="select" id="select1">
-    </select>
-    
-    <button id="comparar">Comparar</button>
-    <select name="" class="select" id="select2">
+    <header>
+        <img src="../../recursos/img/logo.png">
+        <div class="buscador">
+            <input type="text" class="busc" id="input1" placeholder="Buscar">
+            <div class="busqs" id="busq1"></div>
+        </div>
+        <nav>
+            <button class="inicio" onclick="location.href='../../AFINAL/inicio/index.html'">Inicio</button>
+            <button class="armar" onclick="location.href='../../AFINAL/armar-pc/index.html'">Arma tu PC</button>
+            <button class="comparar" onclick="location.href='../../AFINAL/comparacion/index.html'">Comparar</button>
+        </nav>
+    </header>
 
-    </select>
+    <article>
+        <h1>Comparar</h1>
+        <h2>Compará lo que quieras</h2>
+    </article>
+
+    <main>
+        <aside>
+            <button class="boton"><img class="comp" src="../../recursos/img/procesador.png">Procesador</button>
+            <button class="boton"><img class="comp" src="../../recursos/img/fuente.png">Fuente</button>
+            <button class="boton"><img class="comp" src="../../recursos/img/mother.png">Motherboard</button>
+            <button class="boton"><img class="comp" src="../../recursos/img/disco.png">Disco SSD</button>
+            <button class="boton"><img class="comp" src="../../recursos/img/ram.png">RAM</button>
+            <button class="boton"><img class="comp" src="../../recursos/img/grafica.png">Gráfica</button>
+        </aside>
+        
+        <section>
+            <select name="" class="select" id="select1"></select>
+            <button class="compararBoton">Comparar</button>
+            <select name="" class="select" id="select2"></select>
+        </section>
+    </main>
+<p class="titu no"></p>
+    
 </body>
 </html>

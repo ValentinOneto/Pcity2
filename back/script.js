@@ -56,6 +56,6 @@ sesionfun("hola", "1234");
 onEvent("sesion", sesionfun);
 onEvent("registro", registrofun);
 onEvent("componentesComparar", compararfun);
-onEvent("discos SSD", discosfun);
+
 
 startServer();
