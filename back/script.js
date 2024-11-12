@@ -34,8 +34,28 @@ onEvent('componentes', () => {
   return componentesTodo;
 })
 
+function compararfun(data) {
+  const componentes = JSON.parse(
+    fs.readFileSync('datos.json')
+  )
+  
+  let filtrados = []
+
+  Object.keys(componentes).forEach(marca => {
+    componentes[marca].forEach(componente => {
+      if (data.includes(componente.nombre)) {
+        filtrados.push(componente)
+      }
+    })
+  })
+
+  return filtrados
+}
+
 sesionfun("hola", "1234");
 onEvent("sesion", sesionfun);
 onEvent("registro", registrofun);
+onEvent("componentesComparar", compararfun);
+onEvent("discos SSD", discosfun);
 
 startServer();
