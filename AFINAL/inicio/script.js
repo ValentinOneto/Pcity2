@@ -1,45 +1,75 @@
 document.addEventListener('DOMContentLoaded', () => {
     let opciones = [];
+    let componentesEntero = [];
     const input1 = document.getElementById('input1');
     const busq1 = document.getElementById('busq1');
     
-    
     fetchData('componentes', (componentes) => {
+        componentesEntero = componentes;
         const nombreComponentes = Object.values(componentes).flat().map(item => item.nombre);
-        console.log(nombreComponentes);
-        opciones.push(nombreComponentes);
-        setupAutocomplete(input1, busq1, opciones)
-    })
+        opciones.push(...nombreComponentes);
+        setupAutocomplete(input1, busq1, opciones);
     
-    console.log(opciones)
+        mostrarComponentes();
+    });
     
-    function setupAutocomplete(input, busq, opciones) {
-        input.addEventListener('input', function () {
-            const inputValue = input.value.toLowerCase();
-            busq.innerHTML = '';
+    function mostrarComponentes() {
+        const categorias = componentesEntero;
+        
+        for (const categoria in categorias) {
+            categorias[categoria].forEach(componente => {
+                const tarjeta = document.createElement('button');
+                const foto = document.createElement('img');
+                const nombre = document.createElement('h5');
     
-            const opcionFilt = opciones.filter(opcion =>
-                opcion.toLowerCase().startsWith(inputValue)
-            );
+                tarjeta.classList.add('comp');
+                foto.classList.add('foto');
     
-            opcionFilt.forEach(opcion => {
-                const suggestionItem = document.createElement('div');
-                suggestionItem.textContent = opcion;
-                busq.appendChild(suggestionItem);
+                foto.src = componente.imagen;
+                nombre.textContent = componente.nombre
     
-                suggestionItem.addEventListener('click', function () {
-                    input.value = opcion;
-                    busq.innerHTML = '';
-                });
+                componentesPopu.appendChild(tarjeta);
+                tarjeta.appendChild(nombre);
+                tarjeta.appendChild(foto);
             });
-    
-            if (inputValue === '' || opcionFilt.length === 0) {
-                busq.innerHTML = '';
-            }
-        });
+        }
     }
     
+
+fetchData('componentes', (componentes) => {
+    const nombreComponentes = Object.values(componentes).flat().map(item => item.nombre);
+    opciones.push(...nombreComponentes);
     setupAutocomplete(input1, busq1, opciones);
+});
+
+function setupAutocomplete(input, busq, opciones) {
+    input.addEventListener('input', function () {
+        const inputValue = input.value.toLowerCase();
+        busq.innerHTML = '';
+
+        const opcionFilt = opciones.filter(opcion =>
+            opcion.toLowerCase().startsWith(inputValue)
+        );
+
+        opcionFilt.forEach(opcion => {
+            const suggestionItem = document.createElement('div');
+            suggestionItem.textContent = opcion;
+            busq.appendChild(suggestionItem);
+
+            suggestionItem.addEventListener('click', function () {
+                input.value = opcion;
+                busq.innerHTML = '';
+                window.location.href = '../comparacion/index.html';
+            });
+        });
+
+        if (inputValue === '' || opcionFilt.length === 0) {
+            busq.innerHTML = '';
+        }
+    });
+}
+
+setupAutocomplete(input1, busq1, opciones);
 })
 
 const iniciarBoton = document.getElementById('iniciar');
@@ -49,27 +79,32 @@ const botonVolverIniciar = document.getElementById('iniciarSesion');
 const botonCrear = document.getElementById("crear");
 
 const ojoS = document.getElementById("ojoS");
-const ojoCloseS = document.getElementById("ojoCloseS")
+const ojoCloseS = document.getElementById("ojoCloseS");
 const ojoR = document.getElementById("ojoR");
-const ojoCloseR = document.getElementById("ojoCloseR")
+const ojoCloseR = document.getElementById("ojoCloseR");
+const contraseñaInputS = document.getElementById("contraS");
+const contraseñaInputR = document.getElementById("contraR");
+const personaBoton = document.querySelector(".log");
+const inicio = document.querySelector(".inicio");
+const componentesPopu = document.querySelector(".componentesPopu");
 
 
 function persona(){
     mainSesion.classList.remove("non");
-    fondo.classList.add("fondo");
+    inicio.classList.add("fondo");
 }
 personaBoton.addEventListener('click', persona);
 
 
 function salirSesion() {
     mainSesion.classList.add("non");
-    fondo.classList.remove("fondo");
+    inicio.classList.remove("fondo");
 }
 cruzSesion.addEventListener('click', salirSesion);
 
 function salirRegistrar() {
     mainRegistrar.classList.add("non");
-    fondo.classList.remove("fondo");
+    inicio.classList.remove("fondo");
 }
 cruzRegistrar.addEventListener('click', salirRegistrar);
 

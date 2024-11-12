@@ -1,38 +1,30 @@
-var componentes;
+let componentesTodo;
 
-fetchData('componentes', (componentes) => {
+fetchData('componentes', (data) => {
     const select1 = document.getElementById('select1');
     const select2 = document.getElementById('select2');
+    componentesTodo = data; 
+    
+    function componentesFuncion(categoria) {
+        if (componentesTodo[categoria]) {
+            componentesTodo[categoria].forEach(componente => {
+                const option1 = document.createElement('option');
+                option1.textContent = `${componente.nombre.charAt(0).toUpperCase() + componente.nombre.slice(1).toLowerCase()} - ${categoria}`;
+                option1.value = componente.nombre;
 
-    function componentesFuncion(categoria, componentesCategoria) {
-           
-        componentes.forEach(componente => {
-            const option1 = document.createElement('option');
-            option1.textContent = `${componente.charAt(0).toUpperCase()+ componente.slice(1).toLowerCase()} - ${categoria}`;
-            option1.value = componente.nombre;
+                const option2 = document.createElement('option');
+                option2.textContent = `${componente.nombre.charAt(0).toUpperCase() + componente.nombre.slice(1).toLowerCase()} - ${categoria}`;
+                option2.value = componente.nombre;
 
-            const option2 = document.createElement('option');
-            option2.textContent = `${componente.charAt(0).toUpperCase()+ componente.slice(1).toLowerCase()} - ${categoria}`;
-            option2.value = componente.nombre;
-
-            select1.appendChild(option1);
-            select2.appendChild(option2);
-        });
-
+                select1.appendChild(option1);
+                select2.appendChild(option2);
+            });
+        }
     }
 
-    for(let categoria in componentes){
-        const option1 = document.createElement('option');
-        option1.value = categoria.nombre;
-        option1.textContent = `${categoria.charAt(0).toUpperCase()+ categoria.slice(1).toLowerCase()} - ${categoria.nombre}`;
-       
-
-        const option2 = document.createElement('option');
-        option2.value = categoria.nombre;
-        option2.textContent = `${categoria.charAt(0).toUpperCase()+ categoria.slice(1).toLowerCase()} - ${categoria.nombre}`;
-
+    for (let categoria in componentesTodo) {
+        componentesFuncion(categoria);
     }
-    componentesFuncion();
 });
 
 const select1 = document.getElementById('select1');
@@ -40,12 +32,10 @@ const select2 = document.getElementById('select2');
 
 document.getElementById("comparar").addEventListener("click", () => {
     postData('componentesComparar', [select1.value, select2.value], (response) => {
-        if (response.ok)
-        {
-            window.location.href = "../resultados/index.html"
+        if (response.ok) {
+            window.location.href = "../resultados/index.html";
+        } else {
+            alert("Los datos no se envían correctamente");
         }
-        else {
-            alert("los datos no se envian correctamente")
-        }
-    })
-})
+    });
+});

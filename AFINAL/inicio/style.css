@@ -67,6 +67,9 @@ nav{
         padding-left: 27px;
     }
 
+    &.busc:focus{
+        outline: none;
+    }
 }
 
 .buscador{
@@ -149,27 +152,37 @@ p{
 .comp{
     height: 160px;
     width: 290px;
+    background-color: #e2e2e2;
+    border: 5px none;
+    border-radius: 10px;
     padding: 10px;
     display: flex;
     justify-content: flex-start;
+    flex-direction: row-reverse;
     align-items:center;
     box-sizing: border-box;
     font-size: 1.5rem;
     font-family: 'inter';
+    font-style: normal;
+    transition: 0,3s ease;
 
     &:hover{
+        scale: 1.01;
         cursor:pointer;
+        background-color: #e2e2e2;
     }
 }
+
+
 
 .foto{
     margin-right: 25%;
     margin-right: 10%;
     height: 80px;
-    width: 80px;
+    width: 110px;
 }
 
-.componentes{
+.componentesPopu{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;

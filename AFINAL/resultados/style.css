@@ -16,18 +16,20 @@ header{
     }
 
 nav{
-    width: 45%;
+    width: 40%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-right: 5%;
     margin-top: 1%;
 }
 
-.armar,.comparar,.inicio,.log{
+.armar,.comparar,.inicio{
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     font-weight: 600;
     font-size: 1.5rem;
+    align-items: center;
     background-color:#101E35;
     border: none;
     color: #A6A6A6;
@@ -59,6 +61,10 @@ nav{
         background-repeat: no-repeat;
         background-position: left 2px center;
         padding-left: 27px;
+
+    }
+    &.busc:focus{
+        outline: none;
     }
 
 }
@@ -68,11 +74,6 @@ nav{
     flex-direction: column;
     position: absolute;
     left: 12%;
-
-    &:focus{
-        outline: none;
-        border: none;
-    }
 }
 
 .busqs{

@@ -2,14 +2,11 @@ let opciones = [];
 const input1 = document.getElementById('input1');
 const busq1 = document.getElementById('busq1');
 
-
 fetchData('componentes', (componentes) => {
     const nombreComponentes = Object.values(componentes).flat().map(item => item.nombre);
     opciones.push(...nombreComponentes);
-    setupAutocomplete(input1, busq1, opciones)
-})
-
-console.log(opciones)
+    setupAutocomplete(input1, busq1, opciones);
+});
 
 function setupAutocomplete(input, busq, opciones) {
     input.addEventListener('input', function () {
@@ -28,6 +25,7 @@ function setupAutocomplete(input, busq, opciones) {
             suggestionItem.addEventListener('click', function () {
                 input.value = opcion;
                 busq.innerHTML = '';
+                window.location.href = '../comparacion/index.html';
             });
         });
 

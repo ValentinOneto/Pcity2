@@ -22,9 +22,11 @@ nav{
     align-items: center;
     justify-content: space-between;
     margin-top: 1%;
+    margin-right: 2%;
+    text-align: center;
 }
 
-.armar,.comparar,.inicio,.log{
+.armar,.comparar,.inicio{
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     font-weight: 600;
@@ -60,6 +62,10 @@ nav{
         background-repeat: no-repeat;
         background-position: left 2px center;
         padding-left: 27px;
+    }
+
+    &:focus{
+        outline: none;
     }
 
 }
