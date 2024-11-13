@@ -52,10 +52,106 @@ function compararfun(data) {
   return filtrados
 }
 
+function procesadoresfun () {
+  const componentes = JSON.parse(
+    fs.readFileSync('datos.json')
+  )
+
+  let procesadores = {}
+
+  Object.keys(componentes).forEach(tipo => {
+    if (tipo === "procesadores AMD") {
+      procesadores["procesadores AMD"] = componentes[tipo]
+    }
+    if (tipo === "procesadores Intel") {
+      procesadores["procesadores Intel"] = componentes[tipo]
+    }
+  })
+
+  return procesadores; 
+}
+
+function mothersfun () {
+
+  const componentes = JSON.parse(
+    fs.readFileSync('datos.json')
+  )
+
+  let motherboards = {}
+
+  Object.keys(componentes).forEach(tipo => {
+    if (tipo === "motherboard") {
+      motherboards["motherboard"] = componentes[tipo]
+    }
+  })
+
+  return motherboards; 
+}
+
+
+function ramsfun () {
+
+  const componentes = JSON.parse(
+    fs.readFileSync('datos.json')
+  )
+
+  let rams = {}
+
+  Object.keys(componentes).forEach(tipo => {
+    if (tipo === "ram") {
+      rams["ram"] = componentes[tipo]
+    }
+  })
+
+  return rams; 
+
+}
+
+function graficasfun () {
+
+  const componentes = JSON.parse(
+    fs.readFileSync('datos.json')
+  )
+
+  let gpus = {}
+
+  Object.keys(componentes).forEach(tipo => {
+    if (tipo === "gpu") {
+      gpus["gpu"] = componentes[tipo]
+    }
+  })
+
+  return gpus; 
+
+}
+
+function discosfun () {
+  
+  const componentes = JSON.parse(
+    fs.readFileSync('datos.json')
+  )
+
+  let discos = {}
+
+  Object.keys(componentes).forEach(tipo => {
+    if (tipo === "disco") {
+      discos["disco"] = componentes[tipo]
+    }
+  })
+
+  return discos; 
+
+}
+
 sesionfun("hola", "1234");
 onEvent("sesion", sesionfun);
 onEvent("registro", registrofun);
 onEvent("componentesComparar", compararfun);
+onEvent("procesadores", procesadoresfun); 
+onEvent("motherboards", mothersfun);
+onEvent("rams", ramsfun);
+onEvent("graficas", graficasfun); 
+onEvent("discos", discosfun),
 
 
 

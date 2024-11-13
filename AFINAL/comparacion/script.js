@@ -1,5 +1,4 @@
 let todosComponentes = {
-
     procesadoresArray : [],
     motherboardsArray : [],
     discosArray : [],
@@ -50,6 +49,27 @@ const select2 = document.getElementById('select2');
 
 setupAutocomplete(input1, busq1, opciones);
 
+fetchData('procesadores', (procesadores) => {
+    todosComponentes.procesadoresArray.push(procesadores);
+    console.log(procesadores)
+})
+
+fetchData('motherboards', (motherboards) => {
+    todosComponentes.motherboardsArray.push(motherboards);
+    console.log(motherboards)
+})
+
+fetchData('discos', (discos) => {
+    todosComponentes.discosArray.push(discos);
+})
+
+fetchData('rams', (rams) => {
+    todosComponentes.ramsArray.push(rams);
+})
+
+fetchData('graficas', (graficas) => {
+    todosComponentes.graficasArray.push(graficas);
+})
 
 
 let componentes = document.querySelectorAll(".comp");
