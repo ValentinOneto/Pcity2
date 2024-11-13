@@ -51,10 +51,7 @@ const select2 = document.getElementById('select2');
 
 fetchData('procesadores', (procesadores) => {
     procesadoresArray.push(procesadores);
-})
-
-fetchData('fuentes', (fuentes) => {
-    fuentesArray.push(fuentes);
+    console.log(procesadores)
 })
 
 fetchData('motherboards', (motherboards) => {

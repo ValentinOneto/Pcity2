@@ -182,9 +182,7 @@
        }
     ],
 
-    
-
-    "motherboards": [
+    "motherboard": [
       {
         "nombre": "Gigabyte B450M DS3H",
         "imagen": "https://images.versus.io/objects/gigabyte-b450m-ds3h.front.variety.1582994964259.jpg",
@@ -379,7 +377,7 @@
       }
     ],
 
-    "gpus": [
+    "gpu": [
       {
         "nombre": "Nvidia GeForce RTX 3060",
         "imagen": "https://images.versus.io/objects/nvidia-geforce-rtx-3060.front.variety.1610630274718.jpg",
@@ -541,6 +539,29 @@
         "velocidad_escritura_aleatoria": "75000 IOPS",
         "velocidad_escritura secuencial": "450 MB/s",
         "canales_controlador": 8
+      }
+    ],
+
+    "fuente": [
+      {
+      "nombre": "Fuente Sentey HBP600-GS 600W 80 Plus Bronze",
+      "imagen": "https://acdn.mitiendanube.com/stores/001/018/096/products/thumb_500x5001-cac1245ecc5ed3402e16179306561111-480-0.webp"
+      },
+      {
+       "nombre": "Fuente Sentey HBP700-GS 700W 80 Plus Bronze",
+       "imagen": "https://mexx-img-2019.s3.amazonaws.com/fuente-sentey-700w_41994_1.jpeg"
+      },
+      {
+        "nombre": "Fuente Thermaltake Smart Rgb 500W 80 Plus White",
+        "imagen": "https://mexx-img-2019.s3.amazonaws.com/39493_5.jpeg"
+      },
+      {
+        "nombre": "Fuente Thermaltake Smart BM2 750W Semi Modular 80 Plus Bronze",
+        "imagen": "https://mexx-img-2019.s3.amazonaws.com/Fuente-Thermaltake-Smart-BM2-750W-Semi-Modular-80-Plus-Bronze_44169_1.jpeg"
+      },
+      {
+        "nombre": "Fuente Adata Xpg Core Reactor II VE 850W Full Modular 80 Plus Gold ATX 3.1",
+        "imagen": "https://mexx-img-2019.s3.amazonaws.com/47222_5.jpeg"
       }
     ]
   }

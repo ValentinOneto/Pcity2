@@ -1,11 +1,10 @@
 {
   "dependencies": {
-    "soquetic": "^1.1.1"
+    "soquetic": "^1.2.6"
   },
   "name": "back",
   "version": "1.0.0",
   "main": "script.js",
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
