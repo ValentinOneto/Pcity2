@@ -51,12 +51,10 @@ setupAutocomplete(input1, busq1, opciones);
 
 fetchData('procesadores', (procesadores) => {
     todosComponentes.procesadoresArray.push(procesadores);
-    console.log(procesadores)
 })
 
 fetchData('motherboards', (motherboards) => {
     todosComponentes.motherboardsArray.push(motherboards);
-    console.log(motherboards)
 })
 
 fetchData('discos', (discos) => {
