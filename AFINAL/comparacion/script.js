@@ -56,6 +56,7 @@ fetchData('procesadores', (procesadores) => {
 
 fetchData('motherboards', (motherboards) => {
     motherboardsArray.push(motherboards);
+    console.log(motherboards)
 })
 
 fetchData('discos', (discos) => {
