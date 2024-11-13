@@ -1,6 +1,16 @@
+let todosComponentes = {
+
+    procesadoresArray : [],
+    motherboardsArray : [],
+    discosArray : [],
+    ramsArray : [],
+    graficasArray : [],
+}
+
 let opciones = [];
 const input1 = document.getElementById('input1');
 const busq1 = document.getElementById('busq1');
+
 
 fetchData('componentes', (componentes) => {
     const nombreComponentes = Object.values(componentes).flat().map(item => item.nombre);
@@ -35,155 +45,114 @@ function setupAutocomplete(input, busq, opciones) {
     });
 }
 
-setupAutocomplete(input1, busq1, opciones);
-
-
-let procesadoresArray = [];
-let fuentesArray = [];
-let motherboardsArray = [];
-let discosArray = [];
-let ramsArray = [];
-let graficasArray = [];
-
 const select1 = document.getElementById('select1');
 const select2 = document.getElementById('select2');
 
+setupAutocomplete(input1, busq1, opciones);
 
-fetchData('procesadores', (procesadores) => {
-    procesadoresArray.push(procesadores);
-})
 
-fetchData('fuentes', (fuentes) => {
-    fuentesArray.push(fuentes);
-})
-
-fetchData('motherboards', (motherboards) => {
-    motherboardsArray.push(motherboards);
-})
-
-fetchData('discos', (discos) => {
-    discosArray.push(discos);
-})
-
-fetchData('rams', (rams) => {
-    ramsArray.push(rams);
-})
-
-fetchData('graficas', (graficas) => {
-    graficasArray.push(graficas);
-})
 
 let componentes = document.querySelectorAll(".comp");
-let titulo = document.getElementById("titu");
+let titulo = document.getElementById("titulo");
+let botones = document.querySelectorAll(".boton")
+
+function colorBoton(button) {
+    [...botones].forEach(b => {
+        b.classList.remove('filtro')
+    })
+    button.classList.add('filtro')
+}
 
 function inputs (){
-
     componentes.forEach(componente => {
         componente.addEventListener("click", ()=> { 
     
     componentes.forEach(c => c.classList.remove("filtro"));
-    componente.classList.add("filtro")
+    componente.classList.add("filtro");
 
     let titulos = componente.nextSibling.textContent.trim();
     titulo.textContent = titulos;
 
+    select1.innerHTML = '';
+    select2.innerHTML = '';
+
     if(titulo.textContent == "Procesador"){
-        procesadoresArray.forEach([option1, option2 => {
+        todosComponentes.procesadoresArray.forEach((procesador) => {
                 const option1 = document.createElement('option');
-                option1.textContent = `${componente.nombre}`;
-                option1.value = componente.nombre;
+                option1.textContent = `${procesador.nombre}`;
+                option1.value = procesador.nombre;
 
-                option2 = document.createElement('option');
-                option2.textContent = `${componente.nombre}`;
-                option2.value = componente.nombre;
+                const option2 = document.createElement('option');
+                option2.textContent = `${procesador.nombre}`;
+                option2.value = procesador.nombre;
 
                 select1.appendChild(option1);
                 select2.appendChild(option2);
 
-        }])
-    } else if(titulo.textContent == "Fuente"){
-        procesadoresArray.forEach([option1, option2 => {
-                const option1 = document.createElement('option');
-                option1.textContent = `${componente.nombre}`;
-                option1.value = componente.nombre;
-
-                option2 = document.createElement('option');
-                option2.textContent = `${componente.nombre}`;
-                option2.value = componente.nombre;
-
-                select1.appendChild(option1);
-                select2.appendChild(option2);
-
-        }])
+        })
     } else if (titulo.textContent == "Motherboard"){
-        procesadoresArray.forEach([option1, option2 => {
+        todosComponentes.motherboardsArray.forEach((motherboard) => {
                 const option1 = document.createElement('option');
-                option1.textContent = `${componente.nombre}`;
-                option1.value = componente.nombre;
+                option1.textContent = `${motherboard.nombre}`;
+                option1.value = motherboard.nombre;
 
-                option2 = document.createElement('option');
-                option2.textContent = `${componente.nombre}`;
-                option2.value = componente.nombre;
+                const option2 = document.createElement('option');
+                option2.textContent = `${motherboard.nombre}`;
+                option2.value = motherboard.nombre;
 
                 select1.appendChild(option1);
                 select2.appendChild(option2);
 
-        }])
+        })
     } else if(titulo.textContent == "Disco SSD"){
-        procesadoresArray.forEach([option1, option2 => {
+        todosComponentes.discosArray.forEach((disco) => {
                 const option1 = document.createElement('option');
-                option1.textContent = `${componente.nombre}`;
-                option1.value = componente.nombre;
+                option1.textContent = `${disco.nombre}`;
+                option1.value = disco.nombre;
 
-                option2 = document.createElement('option');
-                option2.textContent = `${componente.nombre}`;
-                option2.value = componente.nombre;
+                const option2 = document.createElement('option');
+                option2.textContent = `${disco.nombre}`;
+                option2. value = disco.nombre;
 
                 select1.appendChild(option1);
                 select2.appendChild(option2);
-        }])
+        })
     } else if(titulo.textContent == "RAM"){
-        procesadoresArray.forEach([option1, option2 => {
+        todosComponentes.ramsArray.forEach((ram) => {
                 const option1 = document.createElement('option');
-                option1.textContent = `${componente.nombre}`;
-                option1.value = componente.nombre;
+                option1.textContent = `${ram.nombre}`;
+                option1.value = ram.nombre;
 
-                option2 = document.createElement('option');
-                option2.textContent = `${componente.nombre}`;
-                option2.value = componente.nombre;
+                const option2 = document.createElement('option');
+                option2.textContent = `${ram.nombre}`;
+                option2.value = ram.nombre;
 
                 select1.appendChild(option1);
                 select2.appendChild(option2);
 
-        }])
+        })
     } else if (titulo.textContent == "Gráfica"){
-        procesadoresArray.forEach([option1, option2 => {
+        todosComponentes.graficasArray.forEach((grafica) => {
                 const option1 = document.createElement('option');
-                option1.textContent = `${componente.nombre}`;
-                option1.value = componente.nombre;
+                option1.textContent = `${grafica.nombre}`;
+                option1.value = grafica.nombre;
 
-                option2 = document.createElement('option');
-                option2.textContent = `${componente.nombre}`;
-                option2.value = componente.nombre;
+                const option2 = document.createElement('option');
+                option2.textContent = `${grafica.nombre}`;
+                option2.value = grafica.nombre;
                 
                 select1.appendChild(option1);
                 select2.appendChild(option2);
 
-        }])
+        })
     }
 });
 })
-inputs();
 }
 
-let botones = document.querySelectorAll(".boton");
-botones.forEach(boton => {
-boton.addEventListener("click", ()=> { 
+inputs()
 
-    botones.forEach(c => c.classList.remove("filtro"));
-    boton.classList.add("filtro");
-});
-});
+
 
 document.getElementById("compararBoton").addEventListener("click", () => {
     postData('componentesComparar', [select1.value, select2.value], (response) => {

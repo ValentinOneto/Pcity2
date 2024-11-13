@@ -56,11 +56,7 @@ sesionfun("hola", "1234");
 onEvent("sesion", sesionfun);
 onEvent("registro", registrofun);
 onEvent("componentesComparar", compararfun);
-onEvent("procesadores", procesadoresfun); 
-onEvent("mothers", mothersfun);
-onEvent("rams", ramsfun);
-onEvent("graficas", grficasfun); 
-onEvent("discos", discosfun),
+
 
 
 startServer();

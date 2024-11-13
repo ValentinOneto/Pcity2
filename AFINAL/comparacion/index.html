@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="style.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.4/socket.io.js"></script>
         <script src="../../socket.js"></script>
-        <script type="module" src="script.js" defer></script>
+        <script src="script.js" defer></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
@@ -39,21 +39,26 @@
 
     <main>
         <aside>
-            <button class="boton"><img class="comp" src="../../recursos/img/procesador.png">Procesador</button>
-            <button class="boton"><img class="comp" src="../../recursos/img/fuente.png">Fuente</button>
-            <button class="boton"><img class="comp" src="../../recursos/img/mother.png">Motherboard</button>
-            <button class="boton"><img class="comp" src="../../recursos/img/disco.png">Disco SSD</button>
-            <button class="boton"><img class="comp" src="../../recursos/img/ram.png">RAM</button>
-            <button class="boton"><img class="comp" src="../../recursos/img/grafica.png">Gráfica</button>
+            <button class="boton" onclick="colorBoton(this)"><img class="comp" src="../../recursos/img/procesador.png">Procesador</button>
+            <button class="boton" onclick="colorBoton(this)"><img class="comp" src="../../recursos/img/mother.png">Motherboard</button>
+            <button class="boton" onclick="colorBoton(this)"><img class="comp" src="../../recursos/img/disco.png">Disco SSD</button>
+            <button class="boton" onclick="colorBoton(this)"><img class="comp" src="../../recursos/img/ram.png">RAM</button>
+            <button class="boton" onclick="colorBoton(this)"><img class="comp" src="../../recursos/img/grafica.png">Gráfica</button>
         </aside>
         
         <section>
-            <select name="" class="select" id="select1"></select>
+            <div class="componente1">
+                <p class="comps1">Componente 1:</p>
+                <select name="" class="select" id="select1"></select>
+            </div>
             <button class="compararBoton" id="compararBoton">Comparar</button>
-            <select name="" class="select" id="select2"></select>
+            <div class="componente1">
+                <p class="comps1">Componente 2:</p>
+                <select name="" class="select" id="select2"></select>
+            </div>
         </section>
     </main>
-<p class="titu no"></p>
+<p id="titulo"></p>
     
 </body>
 </html>
