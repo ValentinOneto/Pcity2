@@ -56,7 +56,7 @@ function procesadoresfun () {
     fs.readFileSync('Datos.json')
   )
 
-  let procesadores = []
+  let procesadores = {}
 
   Object.keys(componentes).forEach(tipo => {
     if (tipo === "procesadores AMD") {
@@ -76,7 +76,7 @@ function mothersfun () {
     fs.readFileSync('Datos.json')
   )
 
-  let motherboards = []
+  let motherboards = {}
 
   Object.keys(componentes).forEach(tipo => {
     if (tipo === "motherboard") {
@@ -94,7 +94,7 @@ function ramsfun () {
     fs.readFileSync('Datos.json')
   )
 
-  let rams = []
+  let rams = {}
 
   Object.keys(componentes).forEach(tipo => {
     if (tipo === "ram") {
@@ -112,7 +112,7 @@ function graficasfun () {
     fs.readFileSync('Datos.json')
   )
 
-  let gpus = []
+  let gpus = {}
 
   Object.keys(componentes).forEach(tipo => {
     if (tipo === "gpu") {
@@ -130,7 +130,7 @@ function discosfun () {
     fs.readFileSync('Datos.json')
   )
 
-  let discos = []
+  let discos = {}
 
   Object.keys(componentes).forEach(tipo => {
     if (tipo === "disco") {

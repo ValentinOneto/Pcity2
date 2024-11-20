@@ -1,95 +1,70 @@
 document.addEventListener('DOMContentLoaded', () => {
     let opciones = [];
-    let componentesEntero = [];
+    let componentesEntero = {};
     const input1 = document.getElementById('input1');
     const busq1 = document.getElementById('busq1');
-    
+    const componentesPopu = document.querySelector(".componentesPopu");
+
+
     fetchData('componentes', (componentes) => {
-        componentesEntero = componentes;
+        componentes = componentes.data;
         const nombreComponentes = Object.values(componentes).flat().map(item => item.nombre);
+        console.log(componentes);
         opciones.push(...nombreComponentes);
         setupAutocomplete(input1, busq1, opciones);
-    
-        mostrarComponentes();
+        mostrarComponentes(componentes);
     });
-    
-    document.addEventListener('DOMContentLoaded', () => {
-        let opciones = [];
-        let componentesEntero = {};  // El objeto que contiene las categorías y los componentes
-        const input1 = document.getElementById('input1');
-        const busq1 = document.getElementById('busq1');
-        
-        fetchData('componentes', (componentes) => {
-            componentesEntero = componentes;  // Asignamos el objeto correctamente
-            const nombreComponentes = Object.values(componentes).flat().map(item => item.nombre);
-            opciones.push(...nombreComponentes);
-            setupAutocomplete(input1, busq1, opciones);
-        
-            mostrarComponentes();  // Llamamos a la función para mostrar los componentes
-        });
-        
-        function mostrarComponentes() {
-            // Usamos Object.entries() para recorrer el objeto
-            for (const [categoria, items] of Object.entries(componentesEntero)) {
-                // Verifica si 'items' es un array antes de recorrerlo
-                if (Array.isArray(items)) {
-                    items.forEach(componente => {
-                        const tarjeta = document.createElement('button');
-                        const foto = document.createElement('img');
-                        const nombre = document.createElement('h5');
-            
-                        tarjeta.classList.add('comp');
-                        foto.classList.add('foto');
-            
-                        foto.src = componente.imagen;
-                        nombre.textContent = componente.nombre;
-            
-                        componentesPopu.appendChild(tarjeta);
-                        tarjeta.appendChild(nombre);
-                        tarjeta.appendChild(foto);
-                    });
-                } else {
-                    console.error(`Categoria "${categoria}" no es un array.`, items);
-                }
-            }
-        }
-    
-        function setupAutocomplete(input, busq, opciones) {
-            input.addEventListener('input', function () {
-                const inputValue = input.value ? input.value.toLowerCase() : '';  // Validación agregada
-                busq.innerHTML = '';
-    
-                const opcionFilt = opciones.filter(opcion =>
-                    opcion.toLowerCase().startsWith(inputValue)
-                );
-    
-                opcionFilt.forEach(opcion => {
-                    const suggestionItem = document.createElement('div');
-                    suggestionItem.textContent = opcion;
-                    busq.appendChild(suggestionItem);
-    
-                    suggestionItem.addEventListener('click', function () {
-                        input.value = opcion;
-                        busq.innerHTML = '';
-                        window.location.href = '../comparacion/index.html';
-                    });
-                });
-    
-                if (inputValue === '' || opcionFilt.length === 0) {
-                    busq.innerHTML = '';
-                }
-            });
-        }
-    
-        setupAutocomplete(input1, busq1, opciones);
-    });
-    
 
-fetchData('componentes', (componentes) => {
-    const nombreComponentes = Object.values(componentes).flat().map(item => item.nombre);
-    opciones.push(...nombreComponentes);
-    setupAutocomplete(input1, busq1, opciones);
+
+    function mostrarComponentes(componentes) {
+        for(let categoria in componentes){
+            componentes[categoria].forEach(item =>{
+                const tarjeta = document.createElement('button');
+                const foto = document.createElement('img');
+                const nombre = document.createElement('h5');
+    
+                tarjeta.classList.add('comp');
+                foto.classList.add('foto');
+                foto.src = item.imagen;
+                nombre.textContent = item.nombre;
+    
+                tarjeta.appendChild(nombre);
+                tarjeta.appendChild(foto);
+                componentesPopu.appendChild(tarjeta);
+
+            })
+        }
+     }
+
+    function setupAutocomplete(input, busq, opciones) {
+        input.addEventListener('input', function () {
+            const inputValue = input.value.toLowerCase();
+            busq.innerHTML = '';
+
+            const opcionFilt = opciones.filter(opcion =>
+                opcion.toLowerCase().startsWith(inputValue)
+            );
+
+            opcionFilt.forEach(opcion => {
+                const suggestionItem = document.createElement('div');
+                suggestionItem.textContent = opcion;
+                busq.appendChild(suggestionItem);
+
+                
+                suggestionItem.addEventListener('click', function () {
+                    input.value = opcion;
+                    busq.innerHTML = '';
+                    window.location.href = '../comparacion/index.html';
+                });
+            });
+
+            if (inputValue === '' || opcionFilt.length === 0) {
+                busq.innerHTML = '';
+            }
+        });
+    }
 });
+
 
 function setupAutocomplete(input, busq, opciones) {
     input.addEventListener('input', function () {
@@ -115,11 +90,12 @@ function setupAutocomplete(input, busq, opciones) {
         if (inputValue === '' || opcionFilt.length === 0) {
             busq.innerHTML = '';
         }
+        
+setupAutocomplete(input1, busq1, opciones);
     });
+    
 }
 
-setupAutocomplete(input1, busq1, opciones);
-})
 
 const iniciarBoton = document.getElementById('iniciar');
 const errorS = document.getElementById('errorS');

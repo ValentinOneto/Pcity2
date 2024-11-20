@@ -10,9 +10,38 @@ let opciones = [];
 const input1 = document.getElementById('input1');
 const busq1 = document.getElementById('busq1');
 
+fetchData('procesadores', (procesadores) => {
+    const nombreProcesadores = Object.values(procesadores).flat().map(item => item.nombre);
+    todosComponentes.procesadoresArray.push(procesadores.data);
+    console.log(nombreProcesadores);
+})
+
+fetchData('motherboards', (motherboards) => {
+    const nombreMotherboards = Object.values(motherboards).flat().map(item => item.nombre);
+    todosComponentes.motherboardsArray.push(nombreMotherboards.data);
+    console.log(nombreMotherboards.data)
+})
+
+fetchData('discos', (discos) => {
+    const nombreDiscos = Object.values(discos).flat().map(item => item.nombre);
+    todosComponentes.discosArray.push(discos.data);
+})
+
+fetchData('rams', (rams) => {
+    rams = Object.values(rams).flat().map(item => item.nombre);
+    todosComponentes.ramsArray.push(rams.data);
+    console.log(graficas.data)
+})
+
+fetchData('graficas', (graficas) => {
+    graficas = Object.values(graficas).flat().map(item => item.nombre);
+    todosComponentes.graficasArray.push(graficas);
+})
 
 fetchData('componentes', (componentes) => {
+    componentes = componentes.data;
     const nombreComponentes = Object.values(componentes).flat().map(item => item.nombre);
+    console.log(nombreComponentes);
     opciones.push(...nombreComponentes);
     setupAutocomplete(input1, busq1, opciones);
 });
@@ -49,26 +78,6 @@ const select2 = document.getElementById('select2');
 
 setupAutocomplete(input1, busq1, opciones);
 
-fetchData('procesadores', (procesadores) => {
-    todosComponentes.procesadoresArray.push(procesadores);
-})
-
-fetchData('motherboards', (motherboards) => {
-    todosComponentes.motherboardsArray.push(motherboards);
-})
-
-fetchData('discos', (discos) => {
-    todosComponentes.discosArray.push(discos);
-})
-
-fetchData('rams', (rams) => {
-    todosComponentes.ramsArray.push(rams);
-})
-
-fetchData('graficas', (graficas) => {
-    todosComponentes.graficasArray.push(graficas);
-})
-
 
 let componentes = document.querySelectorAll(".comp");
 let titulo = document.getElementById("titulo");
@@ -97,12 +106,12 @@ function inputs (){
     if(titulo.textContent == "Procesador"){
         todosComponentes.procesadoresArray.forEach((procesador) => {
                 const option1 = document.createElement('option');
-                option1.textContent = `${procesador.nombre}`;
-                option1.value = procesador.nombre;
+                option1.textContent = procesador;
+                option1.value = procesador;
 
                 const option2 = document.createElement('option');
-                option2.textContent = `${procesador.nombre}`;
-                option2.value = procesador.nombre;
+                option2.textContent = procesador;
+                option2.value = procesador;
 
                 select1.appendChild(option1);
                 select2.appendChild(option2);
@@ -111,12 +120,12 @@ function inputs (){
     } else if (titulo.textContent == "Motherboard"){
         todosComponentes.motherboardsArray.forEach((motherboard) => {
                 const option1 = document.createElement('option');
-                option1.textContent = `${motherboard.nombre}`;
-                option1.value = motherboard.nombre;
+                option1.textContent = motherboard;
+                option1.value = motherboard;
 
                 const option2 = document.createElement('option');
-                option2.textContent = `${motherboard.nombre}`;
-                option2.value = motherboard.nombre;
+                option2.textContent = motherboard;
+                option2.value = motherboard;
 
                 select1.appendChild(option1);
                 select2.appendChild(option2);
@@ -125,12 +134,12 @@ function inputs (){
     } else if(titulo.textContent == "Disco SSD"){
         todosComponentes.discosArray.forEach((disco) => {
                 const option1 = document.createElement('option');
-                option1.textContent = `${disco.nombre}`;
-                option1.value = disco.nombre;
+                option1.textContent = disco;
+                option1.value = disco;
 
                 const option2 = document.createElement('option');
-                option2.textContent = `${disco.nombre}`;
-                option2. value = disco.nombre;
+                option2.textContent = disco;
+                option2. value = disco;
 
                 select1.appendChild(option1);
                 select2.appendChild(option2);
@@ -138,12 +147,12 @@ function inputs (){
     } else if(titulo.textContent == "RAM"){
         todosComponentes.ramsArray.forEach((ram) => {
                 const option1 = document.createElement('option');
-                option1.textContent = `${ram.nombre}`;
-                option1.value = ram.nombre;
+                option1.textContent = ram;
+                option1.value = ram;
 
                 const option2 = document.createElement('option');
-                option2.textContent = `${ram.nombre}`;
-                option2.value = ram.nombre;
+                option2.textContent = ram;
+                option2.value = ram;
 
                 select1.appendChild(option1);
                 select2.appendChild(option2);
@@ -152,12 +161,12 @@ function inputs (){
     } else if (titulo.textContent == "Gráfica"){
         todosComponentes.graficasArray.forEach((grafica) => {
                 const option1 = document.createElement('option');
-                option1.textContent = `${grafica.nombre}`;
-                option1.value = grafica.nombre;
+                option1.textContent = grafica;
+                option1.value = grafica;
 
                 const option2 = document.createElement('option');
-                option2.textContent = `${grafica.nombre}`;
-                option2.value = grafica.nombre;
+                option2.textContent = grafica;
+                option2.value = grafica;
                 
                 select1.appendChild(option1);
                 select2.appendChild(option2);
