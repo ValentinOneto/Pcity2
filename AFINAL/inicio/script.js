@@ -13,27 +13,76 @@ document.addEventListener('DOMContentLoaded', () => {
         mostrarComponentes();
     });
     
-    function mostrarComponentes() {
-        const categorias = componentesEntero;
+    document.addEventListener('DOMContentLoaded', () => {
+        let opciones = [];
+        let componentesEntero = {};  // El objeto que contiene las categorías y los componentes
+        const input1 = document.getElementById('input1');
+        const busq1 = document.getElementById('busq1');
         
-        for (const categoria in categorias) {
-            categorias[categoria].forEach(componente => {
-                const tarjeta = document.createElement('button');
-                const foto = document.createElement('img');
-                const nombre = document.createElement('h5');
+        fetchData('componentes', (componentes) => {
+            componentesEntero = componentes;  // Asignamos el objeto correctamente
+            const nombreComponentes = Object.values(componentes).flat().map(item => item.nombre);
+            opciones.push(...nombreComponentes);
+            setupAutocomplete(input1, busq1, opciones);
+        
+            mostrarComponentes();  // Llamamos a la función para mostrar los componentes
+        });
+        
+        function mostrarComponentes() {
+            // Usamos Object.entries() para recorrer el objeto
+            for (const [categoria, items] of Object.entries(componentesEntero)) {
+                // Verifica si 'items' es un array antes de recorrerlo
+                if (Array.isArray(items)) {
+                    items.forEach(componente => {
+                        const tarjeta = document.createElement('button');
+                        const foto = document.createElement('img');
+                        const nombre = document.createElement('h5');
+            
+                        tarjeta.classList.add('comp');
+                        foto.classList.add('foto');
+            
+                        foto.src = componente.imagen;
+                        nombre.textContent = componente.nombre;
+            
+                        componentesPopu.appendChild(tarjeta);
+                        tarjeta.appendChild(nombre);
+                        tarjeta.appendChild(foto);
+                    });
+                } else {
+                    console.error(`Categoria "${categoria}" no es un array.`, items);
+                }
+            }
+        }
     
-                tarjeta.classList.add('comp');
-                foto.classList.add('foto');
+        function setupAutocomplete(input, busq, opciones) {
+            input.addEventListener('input', function () {
+                const inputValue = input.value ? input.value.toLowerCase() : '';  // Validación agregada
+                busq.innerHTML = '';
     
-                foto.src = componente.imagen;
-                nombre.textContent = componente.nombre
+                const opcionFilt = opciones.filter(opcion =>
+                    opcion.toLowerCase().startsWith(inputValue)
+                );
     
-                componentesPopu.appendChild(tarjeta);
-                tarjeta.appendChild(nombre);
-                tarjeta.appendChild(foto);
+                opcionFilt.forEach(opcion => {
+                    const suggestionItem = document.createElement('div');
+                    suggestionItem.textContent = opcion;
+                    busq.appendChild(suggestionItem);
+    
+                    suggestionItem.addEventListener('click', function () {
+                        input.value = opcion;
+                        busq.innerHTML = '';
+                        window.location.href = '../comparacion/index.html';
+                    });
+                });
+    
+                if (inputValue === '' || opcionFilt.length === 0) {
+                    busq.innerHTML = '';
+                }
             });
         }
-    }
+    
+        setupAutocomplete(input1, busq1, opciones);
+    });
     
 
 fetchData('componentes', (componentes) => {
@@ -87,6 +136,8 @@ const contraseñaInputR = document.getElementById("contraR");
 const personaBoton = document.querySelector(".log");
 const inicio = document.querySelector(".inicio");
 const componentesPopu = document.querySelector(".componentesPopu");
+const nombreInputS = document.getElementById("nombreS");
+const nombreInputR = document.getElementById("nombreR");
 
 
 function persona(){

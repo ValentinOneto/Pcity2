@@ -29,9 +29,9 @@ function sesionfun(nombre, contraseña)
 }
 
 onEvent('componentes', () => {
-  let componentesTodo = fs.readFileSync('datos.json', 'utf-8');
-  componentesTodo = JSON.parse(componentesTodo);
-  return componentesTodo;
+  let componentes = fs.readFileSync('datos.json', 'utf-8');
+  componentes = JSON.parse(componentesTodo);
+  return componentes;
 })
 
 function compararfun(data) {
