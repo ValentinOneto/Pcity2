@@ -29,14 +29,13 @@ function sesionfun(nombre, contraseña)
 }
 
 onEvent('componentes', () => {
-  let componentes = fs.readFileSync('datos.json', 'utf-8');
-  componentes = JSON.parse(componentesTodo);
+  let componentes = JSON.parse(fs.readFileSync('Datos.json', 'utf-8'));
   return componentes;
 })
 
 function compararfun(data) {
   const componentes = JSON.parse(
-    fs.readFileSync('datos.json')
+    fs.readFileSync('Datos.json')
   )
   
   let filtrados = []
@@ -54,10 +53,10 @@ function compararfun(data) {
 
 function procesadoresfun () {
   const componentes = JSON.parse(
-    fs.readFileSync('datos.json')
+    fs.readFileSync('Datos.json')
   )
 
-  let procesadores = {}
+  let procesadores = []
 
   Object.keys(componentes).forEach(tipo => {
     if (tipo === "procesadores AMD") {
@@ -74,10 +73,10 @@ function procesadoresfun () {
 function mothersfun () {
 
   const componentes = JSON.parse(
-    fs.readFileSync('datos.json')
+    fs.readFileSync('Datos.json')
   )
 
-  let motherboards = {}
+  let motherboards = []
 
   Object.keys(componentes).forEach(tipo => {
     if (tipo === "motherboard") {
@@ -92,10 +91,10 @@ function mothersfun () {
 function ramsfun () {
 
   const componentes = JSON.parse(
-    fs.readFileSync('datos.json')
+    fs.readFileSync('Datos.json')
   )
 
-  let rams = {}
+  let rams = []
 
   Object.keys(componentes).forEach(tipo => {
     if (tipo === "ram") {
@@ -110,10 +109,10 @@ function ramsfun () {
 function graficasfun () {
 
   const componentes = JSON.parse(
-    fs.readFileSync('datos.json')
+    fs.readFileSync('Datos.json')
   )
 
-  let gpus = {}
+  let gpus = []
 
   Object.keys(componentes).forEach(tipo => {
     if (tipo === "gpu") {
@@ -128,10 +127,10 @@ function graficasfun () {
 function discosfun () {
   
   const componentes = JSON.parse(
-    fs.readFileSync('datos.json')
+    fs.readFileSync('Datos.json')
   )
 
-  let discos = {}
+  let discos = []
 
   Object.keys(componentes).forEach(tipo => {
     if (tipo === "disco") {
