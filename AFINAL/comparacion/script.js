@@ -11,38 +11,28 @@ const input1 = document.getElementById('input1');
 const busq1 = document.getElementById('busq1');
 
 fetchData('procesadores', (procesadores) => {
-    const nombreProcesadores = Object.values(procesadores).flat().map(item => item.nombre);
-    todosComponentes.procesadoresArray.push(procesadores.data);
-    console.log(nombreProcesadores);
+    todosComponentes.procesadoresArray = Object.values(procesadores).flat().map(item => item.nombre);
 })
 
 fetchData('motherboards', (motherboards) => {
-    const nombreMotherboards = Object.values(motherboards).flat().map(item => item.nombre);
-    todosComponentes.motherboardsArray.push(nombreMotherboards.data);
-    console.log(nombreMotherboards.data)
+    todosComponentes.motherboardsArray = Object.values(motherboards).flat().map(item => item.nombre);
 })
 
 fetchData('discos', (discos) => {
-    const nombreDiscos = Object.values(discos).flat().map(item => item.nombre);
-    todosComponentes.discosArray.push(discos.data);
+    todosComponentes.discosArray = Object.values(discos).flat().map(item => item.nombre);
 })
 
 fetchData('rams', (rams) => {
-    rams = Object.values(rams).flat().map(item => item.nombre);
-    todosComponentes.ramsArray.push(rams.data);
-    console.log(graficas.data)
+    todosComponentes.ramsArray = Object.values(rams).flat().map(item => item.nombre);
 })
 
 fetchData('graficas', (graficas) => {
-    graficas = Object.values(graficas).flat().map(item => item.nombre);
-    todosComponentes.graficasArray.push(graficas);
+    todosComponentes.graficasArray = Object.values(graficas).flat().map(item => item.nombre);
 })
 
 fetchData('componentes', (componentes) => {
-    componentes = componentes.data;
-    const nombreComponentes = Object.values(componentes).flat().map(item => item.nombre);
-    console.log(nombreComponentes);
-    opciones.push(...nombreComponentes);
+    componentes = Object.values(componentes).flat().map(item => item.nombre);
+    opciones.push(...componentes);
     setupAutocomplete(input1, busq1, opciones);
 });
 

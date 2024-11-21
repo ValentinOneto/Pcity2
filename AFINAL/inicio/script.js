@@ -7,18 +7,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     fetchData('componentes', (componentes) => {
-        componentes = componentes.data;
-        const nombreComponentes = Object.values(componentes).flat().map(item => item.nombre);
+        componentes = Object.values(componentes).flat()
+        .map(item => ({
+            nombre: item.nombre,  
+            imagen: item.imagen
+    }));
         console.log(componentes);
-        opciones.push(...nombreComponentes);
+        opciones.push(...componentes);
         setupAutocomplete(input1, busq1, opciones);
         mostrarComponentes(componentes);
     });
 
 
     function mostrarComponentes(componentes) {
-        for(let categoria in componentes){
-            componentes[categoria].forEach(item =>{
+            componentes.forEach(item =>{
                 const tarjeta = document.createElement('button');
                 const foto = document.createElement('img');
                 const nombre = document.createElement('h5');
@@ -33,69 +35,47 @@ document.addEventListener('DOMContentLoaded', () => {
                 componentesPopu.appendChild(tarjeta);
 
             })
-        }
      }
 
+     fetchData('componentes', (componentes) => {
+        componentes = Object.values(componentes).flat().map(item => item.nombre);
+        opciones.push(...componentes);
+        setupAutocomplete(input1, busq1, opciones);
+    });
+    
     function setupAutocomplete(input, busq, opciones) {
         input.addEventListener('input', function () {
             const inputValue = input.value.toLowerCase();
             busq.innerHTML = '';
-
+    
             const opcionFilt = opciones.filter(opcion =>
                 opcion.toLowerCase().startsWith(inputValue)
             );
-
+    
             opcionFilt.forEach(opcion => {
                 const suggestionItem = document.createElement('div');
                 suggestionItem.textContent = opcion;
                 busq.appendChild(suggestionItem);
-
-                
+    
                 suggestionItem.addEventListener('click', function () {
                     input.value = opcion;
                     busq.innerHTML = '';
                     window.location.href = '../comparacion/index.html';
                 });
             });
-
+    
             if (inputValue === '' || opcionFilt.length === 0) {
                 busq.innerHTML = '';
             }
         });
     }
-});
-
-
-function setupAutocomplete(input, busq, opciones) {
-    input.addEventListener('input', function () {
-        const inputValue = input.value.toLowerCase();
-        busq.innerHTML = '';
-
-        const opcionFilt = opciones.filter(opcion =>
-            opcion.toLowerCase().startsWith(inputValue)
-        );
-
-        opcionFilt.forEach(opcion => {
-            const suggestionItem = document.createElement('div');
-            suggestionItem.textContent = opcion;
-            busq.appendChild(suggestionItem);
-
-            suggestionItem.addEventListener('click', function () {
-                input.value = opcion;
-                busq.innerHTML = '';
-                window.location.href = '../comparacion/index.html';
-            });
-        });
-
-        if (inputValue === '' || opcionFilt.length === 0) {
-            busq.innerHTML = '';
-        }
-        
-setupAutocomplete(input1, busq1, opciones);
+    
+    const select1 = document.getElementById('select1');
+    const select2 = document.getElementById('select2');
+    
+    setupAutocomplete(input1, busq1, opciones);
     });
     
-}
-
 
 const iniciarBoton = document.getElementById('iniciar');
 const errorS = document.getElementById('errorS');
