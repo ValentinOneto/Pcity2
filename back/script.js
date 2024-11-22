@@ -142,6 +142,27 @@ function discosfun () {
 
 }
 
+function resultadofun (recibidos){
+  const componentes = JSON.parse(fs.readFileSync('Datos.json'))
+  let componente_comparar = []
+
+  for (let tipo in componentes) {
+    tipo.forEach(componente => {
+      if (componente.nombre = recibidos[0])
+      {
+        componente_comparar.push(componente)
+      }
+      if (componente.nombre = recibidos[1])
+      {
+        componente_comparar.push(componente)
+      }
+    })
+  }
+
+  return componente_comparar;
+}
+
+
 sesionfun("hola", "1234");
 onEvent("sesion", sesionfun);
 onEvent("registro", registrofun);
@@ -150,7 +171,8 @@ onEvent("procesadores", procesadoresfun);
 onEvent("motherboards", mothersfun);
 onEvent("rams", ramsfun);
 onEvent("graficas", graficasfun); 
-onEvent("discos", discosfun),
+onEvent("discos", discosfun);
+onEvent("resultadoComparar", resultadofun);
 
 
 

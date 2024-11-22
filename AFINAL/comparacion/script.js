@@ -172,7 +172,7 @@ inputs()
 
 
 document.getElementById("compararBoton").addEventListener("click", () => {
-    postData('componentesComparar', [select1.value, select2.value], (response) => {
+    postData('resultadoComparar', [select1.value, select2.value], (response) => {
         if (response.ok) {
             window.location.href = "../resultados/index.html";
         } else {
