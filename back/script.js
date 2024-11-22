@@ -2,13 +2,13 @@
 import { onEvent, sendEvent, startServer } from "soquetic";
 import fs from "fs"
 
-function registrofun (Registro) {
+function registrofun (info) {
   try {
     let registro = fs.readFileSync("./Login.json", "utf8")
     registro = JSON.parse(registro);
-    registro.push(Registro);
+    registro.push(info);
 
-    fs.writeFileSync('./Login.json', JSON.stringify(Login, null, 2), 'utf-8')
+    fs.writeFileSync('./Login.json', JSON.stringify(registro, null, 2), 'utf-8')
 
     return {ok: true}
   }
@@ -16,7 +16,7 @@ function registrofun (Registro) {
 
     return {ok: false};
 }
-};
+}
 
 function sesionfun(nombre, contraseña) 
 {

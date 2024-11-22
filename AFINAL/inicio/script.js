@@ -166,6 +166,7 @@ document.addEventListener('DOMContentLoaded', () => {
     ojoS.addEventListener('click', contraseñaS);
     ojoCloseS.addEventListener('click', contraseñaS);
 
+<<<<<<< Updated upstream
     function contraseñaR() {
         const input = contraseñaInputR;
 
@@ -173,12 +174,53 @@ document.addEventListener('DOMContentLoaded', () => {
             input.type = 'text';
             ojoR.classList.remove("non");
             ojoCloseR.classList.add("non");
+=======
+function registrarse (){
+    const nombre = nombreInputR.value;
+    const contraseña = contraseñaInputR.value;
+
+    postData("registro", {nombre, contraseña},(response) =>{
+        console.log(response.data.ok)
+        if (response.data.ok) {
+            window.location.href = "../inicio/index.html";
+            personaBoton.classList.add("non");
+>>>>>>> Stashed changes
         } else {
             input.type = 'password';
             ojoR.classList.add("non");
             ojoCloseR.classList.remove("non");
         }
     }
+<<<<<<< Updated upstream
     ojoR.addEventListener('click', contraseñaR);
     ojoCloseR.addEventListener('click', contraseñaR);
 });
+=======
+    else{
+        input.type = 'password'
+        ojoS.classList.add("non");
+        ojoCloseS.classList.remove("non");
+    }
+}
+ojoS.addEventListener('click', contraseñaS);
+ojoCloseS.addEventListener('click', contraseñaS);
+
+function contraseñaR(){
+    const input = contraseñaInputR;
+
+    if(input.type == 'password'){
+        input.type = 'text';
+        ojoR.classList.remove("non");
+        ojoCloseR.classList.add("non");
+
+    }
+    else{
+        input.type = 'password'
+        ojoR.classList.add("non");
+        ojoCloseR.classList.remove("non");
+    }
+}
+ojoR.addEventListener('click', contraseñaR);
+ojoCloseR.addEventListener('click', contraseñaR);
+document.getElementById('registrar').addEventListener('click', registrarse)
+>>>>>>> Stashed changes
