@@ -142,24 +142,30 @@ function discosfun () {
 
 }
 
+let componente_comparar = []
+
 function resultadofun (recibidos){
-  const componentes = JSON.parse(fs.readFileSync('Datos.json'))
-  let componente_comparar = []
+  try {
+    const componentes = JSON.parse(fs.readFileSync('Datos.json'))
+  
+    for (let tipo in componentes) {
+      componentes[tipo].forEach(componente => {
+        if (componente.nombre = recibidos[0])
+        {
+          componente_comparar.push(componente)
+        }
+        if (componente.nombre = recibidos[1])
+        {
+          componente_comparar.push(componente)
+        }
+      })
+    }
 
-  for (let tipo in componentes) {
-    componentes[tipo].forEach(componente => {
-      if (componente.nombre = recibidos[0])
-      {
-        componente_comparar.push(componente)
-      }
-      if (componente.nombre = recibidos[1])
-      {
-        componente_comparar.push(componente)
-      }
-    })
+    return {ok: true};
+  } catch (err) {
+
+    return {ok: false};
   }
-
-  return componente_comparar;
 }
 
 
