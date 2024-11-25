@@ -180,18 +180,18 @@ main{
 table {
     width: 100%;
     border-collapse: collapse;
-
+    font-family:'crimson text';
 }
 th, td {
     border: 1px solid #ddd;
     padding: 8px;
     text-align: center;
+    font-size: larger;
 }
 th {
     background-color: #f2f2f2;
-    font-size: x-large;
+    font-size: xx-large;
 }
 img {
-    max-width: 100px;
-    height: auto;
+    max-width: 250px;
 }

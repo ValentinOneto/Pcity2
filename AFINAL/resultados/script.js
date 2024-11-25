@@ -38,46 +38,11 @@ function setupAutocomplete(input, busq, opciones) {
 setupAutocomplete(input1, busq1, opciones);
 
 let componentesRecibidos = [];
-// let componentesRecibidos = [
-//     {
-//     "nombre": "Samsung 980 Pro 1TB",
-//     "imagen": "https://images.versus.io/objects/samsung-990-pro-1tb.front.variety.1669636838690.jpg",
-//     "capacidad": "1 TB",
-//     "velocidad_lectura_aleatoria": "1000000 IOPS",
-//     "velocidad_lectura_secuencial": "7000 MB/s",
-//     "velocidad_escritura_aleatoria": "1000000 IOPS",
-//     "velocidad_escritura secuencial": "5000 MB/s",
-//     "canales_controlador": 4
-//   },
-
-//   {
-//     "nombre": "Kingston A400 480GB",
-//     "imagen": "https://images.versus.io/objects/kingston-a400-480gb.front.variety.1576684641045.jpg",
-//     "capacidad": "480 GB",
-//     "velocidad_lectura_aleatoria": "95000 IOPS",
-//     "velocidad_lectura_secuencial": "500 MB/s",
-//     "velocidad_escritura_aleatoria": "85000 IOPS",
-//     "velocidad_escritura secuencial": "450 MB/s",
-//     "canales_controlador": 2
-//   }];
-
-/*
-actual
-
-cambiado
-
-*/
 
 const arrayComponentes = JSON.parse(localStorage.getItem("resultadoComp"));
 arrayComponentes.componente_comparar.forEach(x => {
     componentesRecibidos.push(x)
 })
-// arrayComponentes.map(componentesRecibidos.push)
-// componentesRecibidos.push(arrayComponentes);
-
-
-//localStorage.clear();
-
 
 let tabla = "<table>"; 
 
