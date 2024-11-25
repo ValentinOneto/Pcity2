@@ -147,7 +147,7 @@ function resultadofun (recibidos){
   let componente_comparar = []
 
   for (let tipo in componentes) {
-    tipo.forEach(componente => {
+    componentes[tipo].forEach(componente => {
       if (componente.nombre = recibidos[0])
       {
         componente_comparar.push(componente)
