@@ -142,7 +142,12 @@ function discosfun () {
 
 }
 
+function respuestafun (){
+
 let componente_comparar = []
+
+return componente_comparar;
+}
 
 function resultadofun (recibidos){
   try {
@@ -179,6 +184,7 @@ onEvent("rams", ramsfun);
 onEvent("graficas", graficasfun); 
 onEvent("discos", discosfun);
 onEvent("resultadoComparar", resultadofun);
+onEvent("ResultadoRespuesta", respuestafun);
 
 
 
