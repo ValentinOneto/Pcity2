@@ -144,20 +144,38 @@ function discosfun () {
 }
 
 
-let componente_comparar = []
 
 function resultadofun (recibidos){
   try {
+    const categorias = [
+  "procesadores AMD",
+  "procesadores Intel",
+  "motherboard",
+  "ram",
+  "gpu",
+  "disco"
+];
+
     const componentes = JSON.parse(fs.readFileSync('Datos.json'))
-    
-    for (let tipo in componentes) {
-      let componente1 = componentes[tipo].find(elemento => elemento.nombre === recibidos[0]);
-      let componente2 = componentes[tipo].find(elemento => elemento.nombre === recibidos[1]);
-    
-      // Si existen, agregar a la lista de comparar
-      if (componente1) componente_comparar.push(componente1);
-      if (componente2) componente_comparar.push(componente2);
+    let componente_comparar = []
+
+    for (let categoria in componentes) {
+
+      for (let i = 0; i < componentes[categoria].length; i++) {
+        let componente = componentes[categoria][i];
+
+        if (componente.nombre === recibidos[0]) {
+          console.log(recibidos[0]);
+          componente_comparar.push(componente)
+          console.log(componente);
+        }
+        if (componente.nombre === recibidos[1]) {
+          componente_comparar.push(componente)
+          console.log(componente);
+        }
+      }
     }
+  
     return {componente_comparar};
 
   } catch (err) {
