@@ -173,10 +173,7 @@ inputs()
 
 document.getElementById("compararBoton").addEventListener("click", () => {
     postData('resultadoComparar', [select1.value, select2.value], (response) => {
-        if (response.ok) {
+            localStorage.setItem("resultadoComp", JSON.stringify(response));
             window.location.href = "../resultados/index.html";
-        } else {
-            alert("Los datos no se envían correctamente");
-        }
     });
 });

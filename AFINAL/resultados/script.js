@@ -37,47 +37,20 @@ function setupAutocomplete(input, busq, opciones) {
 
 setupAutocomplete(input1, busq1, opciones);
 
-let componentesRecibidos = [
-    {
-      "nombre": "Intel Core i5-12400",
-        "imagen": "https://images.versus.io/objects/intel-core-i5-12400.front.variety.1642534862512.jpg",
-        "velocidad": "2.5 GHz",
-        "cache": "480KB 7,5MB 18MB",
-        "hilos":12,
-        "nucleos": 6,
-        "transistores": "10 nm",
-        "ram_velocidad": "4800 MHz",
-        "max_ram": "128 GB",
-        "memoria_canales": 2,
-        "gpu":1,
-        "velocidad_GPU": "300 MHz",
-        "unidades_ejecucion": 24,
-        "pantallas_compatibles": 4,
-        "unidades_generacion_salida": 24,
-        "tmu": 16,
-        "unidades_tonalidad": 256
-      },
 
-      {
-        "nombre": "Intel Core i3-14100",
-          "imagen": "https://images.versus.io/objects/intel-core-i3-14100.front.variety.1704934063131.jpg",
-          "velocidad": "3.5 GHz",
-          "cache": "320KB 5MB 12MB",
-          "hilos": 8,
-          "nucleos": 4,
-          "transistores": "10 nm",
-          "ram_velocidad": "4800 MHz",
-          "max_ram": "128 GB",
-          "memoria_canales": 2,
-          "gpu":1,
-          "velocidad_GPU": "300 MHz",
-          "unidades_ejecucion": 32,
-          "pantallas_compatibles": 4,
-          "unidades_generacion_salida": 8,
-          "tmu": 12,
-          "unidades_tonalidad": 192
-       }
-];
+let componentesRecibidos = [];
+
+console.log(localStorage.getItem("resultadoComp"));
+
+
+const datosRaw = localStorage.getItem("resultadoComp");
+if (datosRaw) {
+  console.log(JSON.parse(datosRaw));    
+};
+
+localStorage.clear();
+
+
 
 let tabla = "<table>"; 
 

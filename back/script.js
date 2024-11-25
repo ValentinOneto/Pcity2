@@ -1,6 +1,7 @@
 // @ts-ignore
 import { onEvent, sendEvent, startServer } from "soquetic";
 import fs from "fs"
+import { REFUSED } from "dns";
 
 function registrofun (info) {
   try {
@@ -142,36 +143,30 @@ function discosfun () {
 
 }
 
-function respuestafun (){
 
 let componente_comparar = []
-
-return componente_comparar;
-}
 
 function resultadofun (recibidos){
   try {
     const componentes = JSON.parse(fs.readFileSync('Datos.json'))
-  
+    
     for (let tipo in componentes) {
-      componentes[tipo].forEach(componente => {
-        if (componente.nombre = recibidos[0])
-        {
-          componente_comparar.push(componente)
-        }
-        if (componente.nombre = recibidos[1])
-        {
-          componente_comparar.push(componente)
-        }
-      })
+      let componente1 = componentes[tipo].find(elemento => elemento.nombre === recibidos[0]);
+      let componente2 = componentes[tipo].find(elemento => elemento.nombre === recibidos[1]);
+    
+      // Si existen, agregar a la lista de comparar
+      if (componente1) componente_comparar.push(componente1);
+      if (componente2) componente_comparar.push(componente2);
     }
+    return {componente_comparar};
 
-    return {ok: true};
   } catch (err) {
-
+    
     return {ok: false};
   }
 }
+
+
 
 
 sesionfun("hola", "1234");
@@ -184,7 +179,6 @@ onEvent("rams", ramsfun);
 onEvent("graficas", graficasfun); 
 onEvent("discos", discosfun);
 onEvent("resultadoComparar", resultadofun);
-onEvent("ResultadoRespuesta", respuestafun);
 
 
 
